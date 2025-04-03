@@ -1,0 +1,212 @@
+CRITICAL - 2025-04-01 10:34:57 --> Call to undefined method App\Models\Tabla_Pagos::ultimo_pago_usuario
+#0 C:\xampp\htdocs\Final\blockbuster\app\Controllers\Usuario\Pagos.php(36): CodeIgniter\Model->__call('ultimo_pago_usu...', Array)
+#1 C:\xampp\htdocs\Final\blockbuster\app\Controllers\Usuario\Pagos.php(74): App\Controllers\Usuario\Pagos->load_data()
+#2 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\Pagos->index()
+#3 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Pagos))
+#4 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Final\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2025-04-01 10:41:07 --> Call to undefined method App\Models\Tabla_Pagos::ultimo_pago_usuario
+#0 C:\xampp\htdocs\Final\blockbuster\app\Controllers\Usuario\Pagos.php(36): CodeIgniter\Model->__call('ultimo_pago_usu...', Array)
+#1 C:\xampp\htdocs\Final\blockbuster\app\Controllers\Usuario\Pagos.php(74): App\Controllers\Usuario\Pagos->load_data()
+#2 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\Pagos->index()
+#3 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Pagos))
+#4 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Final\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2025-04-01 10:46:56 --> Call to undefined method App\Models\Tabla_Pagos::ultimo_pago_usuario
+#0 C:\xampp\htdocs\Final\blockbuster\app\Controllers\Usuario\Plan.php(38): CodeIgniter\Model->__call('ultimo_pago_usu...', Array)
+#1 C:\xampp\htdocs\Final\blockbuster\app\Controllers\Usuario\Plan.php(61): App\Controllers\Usuario\Plan->load_data()
+#2 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\Plan->index()
+#3 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Plan))
+#4 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\Final\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2025-04-01 10:47:37 --> Class "App\Models\Tabla_Pagos" not found
+#0 C:\xampp\htdocs\Final\blockbuster\app\Controllers\Usuario\Plan.php(61): App\Controllers\Usuario\Plan->load_data()
+#1 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\Plan->index()
+#2 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Plan))
+#3 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Final\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-04-01 10:47:38 --> Class "App\Models\Tabla_Pagos" not found
+#0 C:\xampp\htdocs\Final\blockbuster\app\Controllers\Usuario\Plan.php(61): App\Controllers\Usuario\Plan->load_data()
+#1 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\Plan->index()
+#2 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Plan))
+#3 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Final\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-04-01 10:47:38 --> Class "App\Models\Tabla_Pagos" not found
+#0 C:\xampp\htdocs\Final\blockbuster\app\Controllers\Usuario\Plan.php(61): App\Controllers\Usuario\Plan->load_data()
+#1 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\Plan->index()
+#2 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Plan))
+#3 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Final\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-04-01 10:47:39 --> Class "App\Models\Tabla_Pagos" not found
+#0 C:\xampp\htdocs\Final\blockbuster\app\Controllers\Usuario\Plan.php(61): App\Controllers\Usuario\Plan->load_data()
+#1 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\Plan->index()
+#2 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Plan))
+#3 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Final\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-04-01 10:47:39 --> Class "App\Models\Tabla_Pagos" not found
+#0 C:\xampp\htdocs\Final\blockbuster\app\Controllers\Usuario\Plan.php(61): App\Controllers\Usuario\Plan->load_data()
+#1 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\Plan->index()
+#2 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Plan))
+#3 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Final\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-04-01 10:47:39 --> Class "App\Models\Tabla_Pagos" not found
+#0 C:\xampp\htdocs\Final\blockbuster\app\Controllers\Usuario\Plan.php(61): App\Controllers\Usuario\Plan->load_data()
+#1 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\Plan->index()
+#2 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Plan))
+#3 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Final\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-04-01 10:47:40 --> Class "App\Models\Tabla_Pagos" not found
+#0 C:\xampp\htdocs\Final\blockbuster\app\Controllers\Usuario\Plan.php(61): App\Controllers\Usuario\Plan->load_data()
+#1 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\Plan->index()
+#2 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Plan))
+#3 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Final\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-04-01 10:48:35 --> Class "App\Models\Tabla_Pagos" not found
+#0 C:\xampp\htdocs\Final\blockbuster\app\Controllers\Usuario\Plan.php(61): App\Controllers\Usuario\Plan->load_data()
+#1 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\Plan->index()
+#2 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Plan))
+#3 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Final\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-04-01 10:48:43 --> Class "App\Models\Tabla_Pagos" not found
+#0 C:\xampp\htdocs\Final\blockbuster\app\Controllers\Usuario\Pagos.php(74): App\Controllers\Usuario\Pagos->load_data()
+#1 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\Pagos->index()
+#2 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Pagos))
+#3 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Final\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Final\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-04-01 23:43:04 --> Undefined property: stdClass::$cantidad_limite_plan
+#0 C:\xampp\htdocs\blockbuster\app\Controllers\Portal\Genero.php(126): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 126, Array)
+#1 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Portal\Genero->verStreaming('6')
+#2 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal\Genero))
+#3 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-04-01 23:45:43 --> Undefined variable: puede_ver_streaming
+#0 C:\xampp\htdocs\blockbuster\app\Views\portal\streaming_detalle.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 45, Array)
+#1 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('portal/streamin...', Array, true)
+#4 C:\xampp\htdocs\blockbuster\app\Controllers\Portal\Genero.php(156): view('portal/streamin...', Array)
+#5 C:\xampp\htdocs\blockbuster\app\Controllers\Portal\Genero.php(150): App\Controllers\Portal\Genero->make_view('portal/streamin...', Array)
+#6 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Portal\Genero->verStreaming('6')
+#7 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal\Genero))
+#8 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2025-04-01 23:45:44 --> Undefined variable: puede_ver_streaming
+#0 C:\xampp\htdocs\blockbuster\app\Views\portal\streaming_detalle.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 45, Array)
+#1 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('portal/streamin...', Array, true)
+#4 C:\xampp\htdocs\blockbuster\app\Controllers\Portal\Genero.php(156): view('portal/streamin...', Array)
+#5 C:\xampp\htdocs\blockbuster\app\Controllers\Portal\Genero.php(150): App\Controllers\Portal\Genero->make_view('portal/streamin...', Array)
+#6 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Portal\Genero->verStreaming('6')
+#7 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal\Genero))
+#8 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2025-04-01 23:45:44 --> Undefined variable: puede_ver_streaming
+#0 C:\xampp\htdocs\blockbuster\app\Views\portal\streaming_detalle.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 45, Array)
+#1 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('portal/streamin...', Array, true)
+#4 C:\xampp\htdocs\blockbuster\app\Controllers\Portal\Genero.php(156): view('portal/streamin...', Array)
+#5 C:\xampp\htdocs\blockbuster\app\Controllers\Portal\Genero.php(150): App\Controllers\Portal\Genero->make_view('portal/streamin...', Array)
+#6 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Portal\Genero->verStreaming('6')
+#7 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal\Genero))
+#8 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2025-04-01 23:45:45 --> Undefined variable: puede_ver_streaming
+#0 C:\xampp\htdocs\blockbuster\app\Views\portal\streaming_detalle.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 45, Array)
+#1 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('portal/streamin...', Array, true)
+#4 C:\xampp\htdocs\blockbuster\app\Controllers\Portal\Genero.php(156): view('portal/streamin...', Array)
+#5 C:\xampp\htdocs\blockbuster\app\Controllers\Portal\Genero.php(150): App\Controllers\Portal\Genero->make_view('portal/streamin...', Array)
+#6 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Portal\Genero->verStreaming('6')
+#7 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal\Genero))
+#8 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2025-04-01 23:45:45 --> Undefined variable: puede_ver_streaming
+#0 C:\xampp\htdocs\blockbuster\app\Views\portal\streaming_detalle.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 45, Array)
+#1 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('portal/streamin...', Array, true)
+#4 C:\xampp\htdocs\blockbuster\app\Controllers\Portal\Genero.php(156): view('portal/streamin...', Array)
+#5 C:\xampp\htdocs\blockbuster\app\Controllers\Portal\Genero.php(150): App\Controllers\Portal\Genero->make_view('portal/streamin...', Array)
+#6 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Portal\Genero->verStreaming('6')
+#7 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal\Genero))
+#8 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2025-04-01 23:50:03 --> Undefined property: stdClass::$tipo_plan
+#0 C:\xampp\htdocs\blockbuster\app\Controllers\Portal\Genero.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 109, Array)
+#1 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Portal\Genero->verStreaming('6')
+#2 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal\Genero))
+#3 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-04-01 23:50:04 --> Undefined property: stdClass::$tipo_plan
+#0 C:\xampp\htdocs\blockbuster\app\Controllers\Portal\Genero.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 109, Array)
+#1 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Portal\Genero->verStreaming('6')
+#2 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal\Genero))
+#3 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-04-01 23:50:04 --> Undefined property: stdClass::$tipo_plan
+#0 C:\xampp\htdocs\blockbuster\app\Controllers\Portal\Genero.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 109, Array)
+#1 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Portal\Genero->verStreaming('6')
+#2 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal\Genero))
+#3 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-04-01 23:50:04 --> Undefined property: stdClass::$tipo_plan
+#0 C:\xampp\htdocs\blockbuster\app\Controllers\Portal\Genero.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 109, Array)
+#1 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Portal\Genero->verStreaming('6')
+#2 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal\Genero))
+#3 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-04-01 23:50:04 --> Undefined property: stdClass::$tipo_plan
+#0 C:\xampp\htdocs\blockbuster\app\Controllers\Portal\Genero.php(109): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 109, Array)
+#1 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Portal\Genero->verStreaming('6')
+#2 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal\Genero))
+#3 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blockbuster\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\blockbuster\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

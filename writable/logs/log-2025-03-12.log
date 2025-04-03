@@ -1,0 +1,236 @@
+ERROR - 2025-03-12 14:19:48 --> Error connecting to the database: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+
+CRITICAL - 2025-03-12 14:19:48 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+
+#0 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id_...', Array, false)
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\xampp_7\htdocs\prueba\app\Models\Tabla_usuario.php(67): CodeIgniter\BaseModel->first()
+#5 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(37): App\Models\Tabla_usuario->verificar_usuario('fanni@live.com', '0bc01fae70b5e73...')
+#6 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#7 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#8 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#11 {main}
+CRITICAL - 2025-03-12 14:44:34 --> Trying to get property 'nombre_completo' of non-object
+#0 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp_7\\htdo...', 42, Array)
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#3 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#6 {main}
+CRITICAL - 2025-03-12 14:45:10 --> Trying to get property 'nombre_completo' of non-object
+#0 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp_7\\htdo...', 42, Array)
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#3 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#6 {main}
+CRITICAL - 2025-03-12 14:45:58 --> Trying to get property 'nombre_completo' of non-object
+#0 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp_7\\htdo...', 42, Array)
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#3 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#6 {main}
+CRITICAL - 2025-03-12 14:47:58 --> Trying to get property 'nombre_completo' of non-object
+#0 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp_7\\htdo...', 42, Array)
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#3 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#6 {main}
+CRITICAL - 2025-03-12 14:50:28 --> Trying to get property 'nombre_completo' of non-object
+#0 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp_7\\htdo...', 42, Array)
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#3 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#6 {main}
+CRITICAL - 2025-03-12 14:51:30 --> Trying to get property 'Nombre_completo' of non-object
+#0 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp_7\\htdo...', 42, Array)
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#3 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#6 {main}
+CRITICAL - 2025-03-12 14:54:42 --> Trying to get property 'nombre_completo' of non-object
+#0 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp_7\\htdo...', 42, Array)
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#3 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#6 {main}
+CRITICAL - 2025-03-12 14:56:25 --> Trying to get property 'nombre_completo' of non-object
+#0 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp_7\\htdo...', 42, Array)
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#3 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#6 {main}
+CRITICAL - 2025-03-12 14:56:53 --> Trying to get property 'usuario' of non-object
+#0 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp_7\\htdo...', 43, Array)
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#3 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#6 {main}
+CRITICAL - 2025-03-12 14:58:31 --> Trying to get property 'sexo_usuario' of non-object
+#0 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp_7\\htdo...', 44, Array)
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#3 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#6 {main}
+CRITICAL - 2025-03-12 15:00:07 --> Undefined property: stdClass::$imagen_usuario
+#0 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp_7\\htdo...', 45, Array)
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#3 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#6 {main}
+CRITICAL - 2025-03-12 15:00:56 --> Call to undefined function App\Controllers\Usuario\make_message()
+#0 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#5 {main}
+ERROR - 2025-03-12 19:11:37 --> Error connecting to the database: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+
+CRITICAL - 2025-03-12 19:11:37 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+
+#0 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id_...', Array, false)
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\xampp_7\htdocs\prueba\app\Models\Tabla_usuario.php(67): CodeIgniter\BaseModel->first()
+#5 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(37): App\Models\Tabla_usuario->verificar_usuario('fanni@live.com', '0bc01fae70b5e73...')
+#6 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#7 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#8 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#11 {main}
+CRITICAL - 2025-03-12 19:12:28 --> Call to undefined function App\Controllers\Usuario\make_message()
+#0 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#5 {main}
+CRITICAL - 2025-03-12 19:22:17 --> syntax error, unexpected '}'
+#0 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp_7\\htdo...')
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#5 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#6 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#9 {main}
+CRITICAL - 2025-03-12 19:22:33 --> Call to undefined function App\Controllers\Usuario\make_message()
+#0 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#5 {main}
+CRITICAL - 2025-03-12 19:45:06 --> Call to undefined function show_message()
+#0 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\View\View.php(210): include()
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('usuario/inicio', Array, true)
+#3 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(21): view('usuario/inicio', Array)
+#4 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(27): App\Controllers\Usuario\InicioSesion->create_view('usuario/inicio', Array)
+#5 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->index()
+#6 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#7 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#10 {main}
+CRITICAL - 2025-03-12 19:46:39 --> Call to undefined function show_message()
+#0 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\View\View.php(210): include()
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('usuario/inicio', Array, true)
+#3 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(21): view('usuario/inicio', Array)
+#4 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(27): App\Controllers\Usuario\InicioSesion->create_view('usuario/inicio', Array)
+#5 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->index()
+#6 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#7 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#10 {main}
+CRITICAL - 2025-03-12 19:46:41 --> Call to undefined function show_message()
+#0 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\View\View.php(210): include()
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('usuario/inicio', Array, true)
+#3 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(21): view('usuario/inicio', Array)
+#4 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(27): App\Controllers\Usuario\InicioSesion->create_view('usuario/inicio', Array)
+#5 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->index()
+#6 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#7 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#10 {main}
+ERROR - 2025-03-12 22:22:09 --> Error connecting to the database: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+
+CRITICAL - 2025-03-12 22:22:09 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+
+#0 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id_...', Array, false)
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\xampp_7\htdocs\prueba\app\Models\Tabla_usuario.php(67): CodeIgniter\BaseModel->first()
+#5 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(37): App\Models\Tabla_usuario->verificar_usuario('fanni@live.com', '0bc01fae70b5e73...')
+#6 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#7 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#8 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#11 {main}
+ERROR - 2025-03-12 22:22:13 --> Error connecting to the database: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+
+CRITICAL - 2025-03-12 22:22:13 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+
+#0 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id_...', Array, false)
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\xampp_7\htdocs\prueba\app\Models\Tabla_usuario.php(67): CodeIgniter\BaseModel->first()
+#5 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(37): App\Models\Tabla_usuario->verificar_usuario('fanni@live.com', '0bc01fae70b5e73...')
+#6 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#7 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#8 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#11 {main}
+CRITICAL - 2025-03-12 23:15:19 --> Call to undefined function show_message()
+#0 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\View\View.php(210): include()
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('usuario/inicio', Array, true)
+#3 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(22): view('usuario/inicio', Array)
+#4 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(28): App\Controllers\Usuario\InicioSesion->create_view('usuario/inicio', Array)
+#5 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->index()
+#6 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#7 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#10 {main}

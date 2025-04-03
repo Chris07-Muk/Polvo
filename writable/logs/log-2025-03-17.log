@@ -1,0 +1,8 @@
+CRITICAL - 2025-03-17 19:32:34 --> Use of undefined constant registrando - assumed 'registrando' (this will throw an Error in a future version of PHP)
+#0 C:\xampp_7\htdocs\prueba\app\Controllers\Panel\Usuario_nuevo.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'C:\\xampp_7\\htdo...', 77, Array)
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Usuario_nuevo->registrar()
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Usuario_nuevo))
+#3 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#6 {main}

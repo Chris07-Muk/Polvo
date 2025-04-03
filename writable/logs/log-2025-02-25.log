@@ -1,0 +1,18 @@
+CRITICAL - 2025-02-25 12:35:31 --> syntax error, unexpected 'public' (T_PUBLIC), expecting end of file
+#0 C:\xampp_7\htdocs\prueba\app\Controllers\Panel\Dashboard.php(13): helper(Array)
+#1 C:\xampp_7\htdocs\prueba\app\Controllers\Panel\Dashboard.php(44): App\Controllers\Panel\Dashboard->load_data()
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Dashboard->index()
+#3 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Dashboard))
+#4 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#7 {main}
+CRITICAL - 2025-02-25 12:36:36 --> Use of undefined constant SUCCESS_ALERT - assumed 'SUCCESS_ALERT' (this will throw an Error in a future version of PHP)
+#0 C:\xampp_7\htdocs\prueba\app\Controllers\Panel\Dashboard.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'C:\\xampp_7\\htdo...', 14, Array)
+#1 C:\xampp_7\htdocs\prueba\app\Controllers\Panel\Dashboard.php(44): App\Controllers\Panel\Dashboard->load_data()
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Dashboard->index()
+#3 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Dashboard))
+#4 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#7 {main}

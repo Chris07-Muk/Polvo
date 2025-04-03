@@ -1,0 +1,75 @@
+ERROR - 2025-03-11 13:53:34 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`id_usuario`, CONCAT(u.nombre_usuario, " ", `u`.`ap_usuario`, " ", u.am_usua...' at line 1
+CRITICAL - 2025-03-11 13:53:34 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`id_usuario`, CONCAT(u.nombre_usuario, " ", `u`.`ap_usuario`, " ", u.am_usua...' at line 1
+#0 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `select`...', 0)
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `select`...')
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `select`...')
+#3 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `select`...', Array, false)
+#4 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp_7\htdocs\prueba\app\Models\Tabla_usuario.php(68): CodeIgniter\BaseModel->first()
+#7 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(37): App\Models\Tabla_usuario->verificar_usuario('hola123@gmail.c...', '03ac674216f3e15...')
+#8 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#9 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#10 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#13 {main}
+ERROR - 2025-03-11 13:54:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`id_usuario`, CONCAT(u.nombre_usuario, " ", `u`.`ap_usuario`, " ", u.am_usua...' at line 1
+CRITICAL - 2025-03-11 13:54:09 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`id_usuario`, CONCAT(u.nombre_usuario, " ", `u`.`ap_usuario`, " ", u.am_usua...' at line 1
+#0 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `select`...', 0)
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `select`...')
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `select`...')
+#3 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `select`...', Array, false)
+#4 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp_7\htdocs\prueba\app\Models\Tabla_usuario.php(68): CodeIgniter\BaseModel->first()
+#7 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(37): App\Models\Tabla_usuario->verificar_usuario('hola123@gmail.c...', '03ac674216f3e15...')
+#8 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#9 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#10 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#13 {main}
+ERROR - 2025-03-11 13:54:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`id_usuario`, CONCAT(u.nombre_usuario, " ", `u`.`ap_usuario`, " ", u.am_usua...' at line 1
+CRITICAL - 2025-03-11 13:54:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`id_usuario`, CONCAT(u.nombre_usuario, " ", `u`.`ap_usuario`, " ", u.am_usua...' at line 1
+#0 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `select`...', 0)
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `select`...')
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `select`...')
+#3 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `select`...', Array, false)
+#4 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp_7\htdocs\prueba\app\Models\Tabla_usuario.php(68): CodeIgniter\BaseModel->first()
+#7 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(37): App\Models\Tabla_usuario->verificar_usuario('hola123@gmail.c...', 'f969fdbe811d8a6...')
+#8 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#9 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#10 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#13 {main}
+ERROR - 2025-03-11 13:57:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`id_usuario`, CONCAT(u.nombre_usuario, ' ', `u`.`ap_usuario`, ' ', u.am_usua...' at line 1
+CRITICAL - 2025-03-11 13:57:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '.`id_usuario`, CONCAT(u.nombre_usuario, ' ', `u`.`ap_usuario`, ' ', u.am_usua...' at line 1
+#0 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `select`...', 0)
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `select`...')
+#2 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `select`...')
+#3 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `select`...', Array, false)
+#4 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp_7\htdocs\prueba\app\Models\Tabla_usuario.php(68): CodeIgniter\BaseModel->first()
+#7 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(37): App\Models\Tabla_usuario->verificar_usuario('hola123@gmail.c...', '5994471abb01112...')
+#8 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#9 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#10 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#13 {main}
+CRITICAL - 2025-03-11 14:28:31 --> syntax error, unexpected '',u.ap_usuario, '' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+#0 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp_7\\htdo...')
+#1 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Tabl...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Tabl...')
+#3 C:\xampp_7\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(35): spl_autoload_call('App\\Models\\Tabl...')
+#4 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#5 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#6 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp_7\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp_7\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp_7\\htdo...')
+#9 {main}

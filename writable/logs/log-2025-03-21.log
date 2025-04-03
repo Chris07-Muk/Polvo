@@ -1,0 +1,47 @@
+ERROR - 2025-03-21 09:29:43 --> Error connecting to the database: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+
+CRITICAL - 2025-03-21 09:29:43 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+
+#0 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id_...', Array, false)
+#2 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\xamp\htdocs\prueba\app\Models\Tabla_usuario.php(101): CodeIgniter\BaseModel->first()
+#5 C:\xamp\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(38): App\Models\Tabla_usuario->verificar_usuario('carlos.admin@ex...', '790f48e3ba51e2d...')
+#6 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#7 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#8 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xamp\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xamp\\htdocs\\...')
+#11 {main}
+CRITICAL - 2025-03-21 10:09:55 --> Undefined variable: nombre_pagina
+#0 C:\xamp\htdocs\prueba\app\Views\usuario\inicio.php(172): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xamp\\htdocs\\...', 172, Array)
+#1 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xamp\\htdocs\\...')
+#2 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('usuario/inicio', Array, true)
+#4 C:\xamp\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(22): view('usuario/inicio', Array)
+#5 C:\xamp\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(28): App\Controllers\Usuario\InicioSesion->create_view('usuario/inicio', Array)
+#6 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->index()
+#7 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#8 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xamp\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xamp\\htdocs\\...')
+#11 {main}
+ERROR - 2025-03-21 10:22:15 --> Error connecting to the database: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+
+CRITICAL - 2025-03-21 10:22:15 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+
+#0 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id_...', Array, false)
+#2 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\xamp\htdocs\prueba\app\Models\Tabla_usuario.php(101): CodeIgniter\BaseModel->first()
+#5 C:\xamp\htdocs\prueba\app\Controllers\Usuario\InicioSesion.php(38): App\Models\Tabla_usuario->verificar_usuario('carlos.admin@ex...', '790f48e3ba51e2d...')
+#6 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#7 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#8 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xamp\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xamp\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xamp\\htdocs\\...')
+#11 {main}
