@@ -4,64 +4,70 @@
 <style>
     body {
         font-family: 'Poppins', sans-serif;
-        background-color: #F9FAFB;
-        color: #111827;
+        background-color: #F3F4F6;
+        color: #1F2937;
     }
 
     .card {
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border-radius: 14px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
         border: none;
-        background-color: #fff;
-        padding: 25px;
+        padding: 30px;
     }
 
-    h4 {
+    .titulo-icono {
+        color: #3B82F6;
+        font-size: 1.8rem;
         font-weight: 600;
-        color: #4F46E5;
+        text-align: center;
         margin-bottom: 25px;
     }
 
     .form-group label {
         font-weight: 500;
-        color: #374151;
         margin-bottom: 6px;
+        color: #374151;
     }
 
-    .form-control, .form-control-file, select, textarea {
-        border-radius: 8px;
+    .form-control,
+    select,
+    textarea {
+        border-radius: 10px;
         border: 1px solid #CBD5E0;
-        padding: 10px;
+        padding: 10px 14px;
         transition: all 0.3s ease;
     }
 
-    .form-control:focus, select:focus, textarea:focus {
-        border-color: #4F46E5;
-        box-shadow: 0 0 0 0.15rem rgba(79, 70, 229, 0.2);
+    .form-control:focus,
+    select:focus,
+    textarea:focus {
+        border-color: #3B82F6;
+        box-shadow: 0 0 0 0.15rem rgba(59, 130, 246, 0.25);
     }
 
     .btn {
-        border-radius: 8px;
-        padding: 10px 20px;
+        border-radius: 10px;
         font-weight: 500;
+        padding: 10px 22px;
         transition: all 0.3s ease;
     }
 
     .btn-success {
-        background-color: #4F46E5;
-        border: none;
+        background-color: #10B981;
         color: white;
+        border: none;
     }
 
     .btn-success:hover {
-        background-color: #4338CA;
+        background-color: #059669;
         transform: translateY(-1px);
     }
 
     .btn-secondary {
         background-color: #6B7280;
-        border: none;
         color: white;
+        border: none;
     }
 
     .btn-secondary:hover {
@@ -69,14 +75,15 @@
         transform: translateY(-1px);
     }
 
-    img {
-        border-radius: 6px;
-        margin-bottom: 10px;
+    img, video {
+        border-radius: 8px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
-    video {
-        border-radius: 6px;
-        margin-bottom: 10px;
+    .form-footer {
+        text-align: right;
+        margin-top: 30px;
     }
 </style>
 <?= $this->endSection() ?>
@@ -85,7 +92,9 @@
 <div class="row justify-content-center">
     <div class="col-md-10 col-lg-8">
         <div class="card">
-            <h4 class="text-center"><i class="fas fa-edit mr-2"></i>Editar Streaming</h4>
+            <div class="titulo-icono">
+                <i class="fas fa-pen-fancy me-2"></i>Editar Información del Streaming
+            </div>
 
             <?= form_open_multipart(route_to('actualizar_streaming', $streaming->id_streaming)) ?>
 
@@ -106,20 +115,16 @@
 
             <div class="form-group">
                 <label for="temporadas">Temporadas</label>
-                <input type="number" name="temporadas" class="form-control" min="1" value="<?= esc($streaming->temporadas_streaming) ?>" required>
+                <input type="number" name="temporadas" min="1" class="form-control" value="<?= esc($streaming->temporadas_streaming) ?>" required>
             </div>
 
             <div class="form-group">
                 <label for="clasificacion">Clasificación</label>
                 <select name="clasificacion" class="form-control" required>
                     <option value="">Seleccione</option>
-                    <?php
-                        $clasificaciones = ['AA', 'A', 'B', 'B15', 'C', 'D'];
-                        foreach ($clasificaciones as $c) {
-                            $selected = ($streaming->clasificacion_streaming == $c) ? 'selected' : '';
-                            echo "<option value=\"$c\" $selected>$c</option>";
-                        }
-                    ?>
+                    <?php foreach (['AA', 'A', 'B', 'B15', 'C', 'D'] as $c): ?>
+                        <option value="<?= $c ?>" <?= ($streaming->clasificacion_streaming == $c) ? 'selected' : '' ?>><?= $c ?></option>
+                    <?php endforeach ?>
                 </select>
             </div>
 
@@ -146,30 +151,30 @@
             </div>
 
             <div class="form-group">
-                <label for="caratula_streaming">Carátula (imagen)</label><br>
+                <label for="caratula_streaming">Carátula actual</label><br>
                 <?php if (!empty($streaming->caratula_streaming)): ?>
-                    <img src="<?= base_url('streaming/caratulas/' . $streaming->caratula_streaming) ?>" width="100" alt="Carátula actual"><br>
-                <?php endif; ?>
-                <input type="file" name="caratula_streaming" class="form-control-file" accept="image/*">
+                    <img src="<?= base_url('streaming/caratulas/' . $streaming->caratula_streaming) ?>" width="100" alt="Carátula actual">
+                <?php endif ?>
+                <input type="file" name="caratula_streaming" class="form-control-file mt-2" accept="image/*">
             </div>
 
             <div class="form-group">
-                <label for="trailer_streaming">Tráiler (video)</label><br>
+                <label for="trailer_streaming">Tráiler actual</label><br>
                 <?php if (!empty($streaming->trailer_streaming)): ?>
-                    <video width="200" controls>
+                    <video width="250" controls>
                         <source src="<?= base_url('streaming/trailers/' . $streaming->trailer_streaming) ?>" type="video/mp4">
-                        Tu navegador no soporta la reproducción de videos.
-                    </video><br>
-                <?php endif; ?>
-                <input type="file" name="trailer_streaming" class="form-control-file" accept="video/*">
+                        Tu navegador no soporta videos.
+                    </video>
+                <?php endif ?>
+                <input type="file" name="trailer_streaming" class="form-control-file mt-2" accept="video/*">
             </div>
 
-            <div class="form-group mt-4 text-right">
+            <div class="form-footer">
                 <button type="submit" class="btn btn-success">
-                    <i class="fas fa-save"></i> Guardar Cambios
+                    <i class="fas fa-save me-1"></i> Guardar Cambios
                 </button>
-                <a href="<?= route_to('streaming') ?>" class="btn btn-secondary ml-2">
-                    <i class="fas fa-arrow-left"></i> Volver al listado
+                <a href="<?= route_to('streaming') ?>" class="btn btn-secondary ms-2">
+                    <i class="fas fa-arrow-left me-1"></i> Cancelar
                 </a>
             </div>
 

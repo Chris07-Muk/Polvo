@@ -4,21 +4,22 @@
 <style>
     body {
         font-family: 'Poppins', sans-serif;
-        background-color: #F9FAFB;
-        color: #111827;
+        background-color: #F3F4F6;
+        color: #1f2937;
     }
 
     .card {
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border-radius: 14px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        padding: 30px;
         border: none;
-        background-color: #fff;
-        padding: 25px;
     }
 
     h4 {
+        color: #0ea5e9;
         font-weight: 600;
-        color: #4F46E5;
+        font-size: 1.5rem;
         margin-bottom: 25px;
     }
 
@@ -28,44 +29,50 @@
         margin-bottom: 6px;
     }
 
-    .form-control, .form-control-file, select, textarea {
-        border-radius: 8px;
-        border: 1px solid #CBD5E0;
-        padding: 10px;
+    .form-control,
+    .form-control-file,
+    select,
+    textarea {
+        border-radius: 10px;
+        border: 1px solid #cbd5e1;
+        padding: 10px 14px;
         transition: all 0.3s ease;
+        font-size: 0.95rem;
     }
 
-    .form-control:focus, select:focus, textarea:focus {
-        border-color: #4F46E5;
-        box-shadow: 0 0 0 0.15rem rgba(79, 70, 229, 0.2);
+    .form-control:focus,
+    select:focus,
+    textarea:focus {
+        border-color: #0ea5e9;
+        box-shadow: 0 0 0 0.15rem rgba(14, 165, 233, 0.25);
     }
 
     .btn {
-        border-radius: 8px;
-        padding: 10px 20px;
+        border-radius: 10px;
         font-weight: 500;
-        transition: all 0.3s ease;
+        padding: 10px 22px;
+        transition: all 0.25s ease;
     }
 
     .btn-success {
-        background-color: #4F46E5;
-        border: none;
+        background-color: #10b981;
         color: white;
+        border: none;
     }
 
     .btn-success:hover {
-        background-color: #4338CA;
+        background-color: #059669;
         transform: translateY(-1px);
     }
 
     .btn-secondary {
-        background-color: #6B7280;
-        border: none;
+        background-color: #6b7280;
         color: white;
+        border: none;
     }
 
     .btn-secondary:hover {
-        background-color: #4B5563;
+        background-color: #4b5563;
         transform: translateY(-1px);
     }
 </style>
@@ -75,32 +82,32 @@
 <div class="row justify-content-center">
     <div class="col-md-10 col-lg-8">
         <div class="card">
-            <h4 class="text-center"><i class="fas fa-film mr-2"></i>Nuevo Streaming</h4>
+            <h4 class="text-center"><i class="fas fa-clapperboard me-2"></i>Registrar Nuevo Título</h4>
 
             <?= form_open_multipart(route_to('guardar_streaming')) ?>
 
             <div class="form-group">
                 <label for="nombre">Nombre del título</label>
-                <input type="text" name="nombre" class="form-control" required>
+                <input type="text" name="nombre" class="form-control" placeholder="Ej. Stranger Things" required>
             </div>
 
             <div class="form-group">
-                <label for="fecha_lanzamiento">Fecha de lanzamiento</label>
+                <label for="fecha_lanzamiento">Fecha de lanzamiento original</label>
                 <input type="date" name="fecha_lanzamiento" class="form-control" required>
             </div>
 
             <div class="form-group">
-                <label for="duracion">Duración</label>
+                <label for="duracion">Duración estimada</label>
                 <input type="time" name="duracion" class="form-control" required>
             </div>
 
             <div class="form-group">
-                <label for="temporadas">Temporadas</label>
+                <label for="temporadas">Cantidad de temporadas</label>
                 <input type="number" name="temporadas" class="form-control" min="1" required>
             </div>
 
             <div class="form-group">
-                <label for="clasificacion">Clasificación</label>
+                <label for="clasificacion">Clasificación por edad</label>
                 <select name="clasificacion" class="form-control" required>
                     <option value="">Seleccione</option>
                     <option value="AA">AA - Infantil</option>
@@ -108,13 +115,13 @@
                     <option value="B">B - Mayores de 12</option>
                     <option value="B15">B15 - Mayores de 15</option>
                     <option value="C">C - Mayores de 18</option>
-                    <option value="D">D - Exclusiva Adultos</option>
+                    <option value="D">D - Solo Adultos</option>
                 </select>
             </div>
 
             <div class="form-group">
                 <label for="sipnosis">Sinopsis</label>
-                <textarea name="sipnosis" class="form-control" rows="4" placeholder="Sinopsis del título..." required></textarea>
+                <textarea name="sipnosis" class="form-control" rows="4" placeholder="Resumen del contenido..." required></textarea>
             </div>
 
             <div class="form-group">
@@ -133,21 +140,21 @@
             </div>
 
             <div class="form-group">
-                <label for="caratula_streaming">Carátula (imagen)</label>
+                <label for="caratula_streaming">Imagen de carátula</label>
                 <input type="file" name="caratula_streaming" class="form-control-file" accept="image/*" required>
             </div>
 
             <div class="form-group">
-                <label for="trailer_streaming">Tráiler (video)</label>
+                <label for="trailer_streaming">Tráiler en video</label>
                 <input type="file" name="trailer_streaming" class="form-control-file" accept="video/*" required>
             </div>
 
-            <div class="form-group mt-4 text-right">
+            <div class="form-group mt-4 text-end">
                 <button type="submit" class="btn btn-success">
-                    <i class="fas fa-save"></i> Guardar Streaming
+                    <i class="fas fa-save me-1"></i> Guardar
                 </button>
-                <a href="<?= route_to('streaming') ?>" class="btn btn-secondary ml-2">
-                    <i class="fas fa-arrow-left"></i> Volver al listado
+                <a href="<?= route_to('streaming') ?>" class="btn btn-secondary ms-2">
+                    <i class="fas fa-arrow-left me-1"></i> Volver
                 </a>
             </div>
 
