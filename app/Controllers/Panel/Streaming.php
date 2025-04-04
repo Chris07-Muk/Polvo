@@ -58,7 +58,7 @@ class Streaming extends BaseController
         return view($name_view, $content);
     }
 
-    public function index()
+    public function inicio()
     {
         if ($this->permiso) {
             return $this->create_view($this->view, $this->load_data());
@@ -69,7 +69,7 @@ class Streaming extends BaseController
         }
     }
 
-    public function nuevo()
+    public function agregar()
     {
         $data = $this->load_data();
         $data['titulo_pagina'] = 'Nuevo Streaming';
@@ -79,7 +79,7 @@ class Streaming extends BaseController
         return $this->create_view('panel/streaming_nuevo', $data);
     }
 
-    public function guardar()
+    public function registrar()
     {
         helper('message');
         $modelo = new Tabla_Streaming();
@@ -202,7 +202,7 @@ public function actualizar($id = 0)
         return redirect()->to(route_to('streaming'));
     }
 
-    public function estatus($id = 0, $estatus = 1)
+    public function cambiar_estatus($id = 0, $estatus = 1)
     {
         helper('message');
 

@@ -49,7 +49,7 @@ class Usuarios_Planes extends BaseController
         return $data;
     }
 
-    public function index()
+    public function inicio()
     {
         if ($this->permiso) {
             $data = $this->load_data();
@@ -63,7 +63,7 @@ $data['usuarios_planes'] = $modelo->get_usuarios_planes(); // antes era findAll(
         }
     }
 
-    public function nuevo()
+    public function agregar()
     {
         $data = $this->load_data();
         $data['titulo_pagina'] = 'Nuevo Registro de Plan';
@@ -82,7 +82,7 @@ $data['usuarios_planes'] = $modelo->get_usuarios_planes(); // antes era findAll(
         return $this->create_view('panel/usuarios_planes_nuevo', $data);
     }
 
-    public function guardar()
+    public function registrar()
     {
         $modelo = new Tabla_UsuariosPlanes();
 

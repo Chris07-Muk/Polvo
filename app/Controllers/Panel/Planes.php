@@ -49,7 +49,7 @@ class Planes extends BaseController
 }
 
 
-    public function index()
+    public function inicio()
     {
         if ($this->permiso) {
             $data = $this->load_data();
@@ -62,14 +62,14 @@ class Planes extends BaseController
         }
     }
 
-    public function nuevo()
+    public function agregar()
     {
         $data = $this->load_data();
         $data['titulo_pagina'] = 'Nuevo Plan';
         return $this->create_view('panel/planes_nuevo', $data);
     }
 
-    public function guardar()
+    public function registrar()
 {
     $modelo = new Tabla_Planes();
 
@@ -165,7 +165,7 @@ class Planes extends BaseController
         return redirect()->to(route_to('planes'));
     }
 
-    public function estatus($id = 0, $estatus = 1)
+    public function cambiar_estatus($id = 0, $estatus = 1)
     {
         $modelo = new Tabla_Planes();
 
