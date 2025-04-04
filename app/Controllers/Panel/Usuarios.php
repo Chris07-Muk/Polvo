@@ -66,7 +66,7 @@ class Usuarios extends BaseController
     }//end make_view
 
     //Main function : index
-    public function index()
+    public function inicio()
     {
         if ($this->permiso) {
             return $this->create_view($this->view, $this->load_data());
@@ -78,7 +78,7 @@ class Usuarios extends BaseController
         }
     }// end index
 
-    public function estatus($id_usuario = 0, $estatus = FALSE){
+    public function cambiar_estatus($id_usuario = 0, $estatus = FALSE){
         helper('message');
         //Instaciamos el modelo
         $tabla_usuarios = new \App\Models\Tabla_usuario;

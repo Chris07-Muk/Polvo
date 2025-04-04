@@ -53,7 +53,7 @@ class Genero_nuevo extends BaseController
         return view($name_view, $content);
     }
 
-    public function index()
+    public function inicio()
     {
         if ($this->permiso) {
             return $this->create_view($this->view, $this->load_data());
@@ -64,7 +64,7 @@ class Genero_nuevo extends BaseController
         }
     }
 
-    public function registrar()
+    public function agregar()
     {
         helper('message');
 

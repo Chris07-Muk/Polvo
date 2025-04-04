@@ -65,63 +65,63 @@ $routes->get('/perfil', 'Usuario\Perfil::index', ['as' => 'perfil']);
 $routes->post('/iniciar_sesion', 'Usuario/InicioSesion::iniciar_sesion');
 $routes->get('/salir', 'Usuario/Logout::index', ['as'=> 'salir']);
 
-$routes->get('/usuarios', 'Panel/Usuarios::index', ['as'=> 'usuarios']);
-$routes->get('/usuario_nuevo', 'Panel/Usuario_nuevo::index', ['as'=> 'usuario_nuevo']);
-$routes->post('/registrar_usuario', 'Panel/Usuario_nuevo::registrar', ['as'=> 'registrar_usuario']);
-$routes->get('/detalles_usuario/(:num)', 'Panel\Usuario_detalles::index/$1', ['as'=> 'detalles_usuario']);
+$routes->get('/usuarios', 'Panel/Usuarios::inicio', ['as'=> 'usuarios']);
+$routes->get('/usuario_nuevo', 'Panel/Usuario_nuevo::inicio', ['as'=> 'usuario_nuevo']);
+$routes->post('/registrar_usuario', 'Panel/Usuario_nuevo::agregar', ['as'=> 'registrar_usuario']);
+$routes->get('/detalles_usuario/(:num)', 'Panel\Usuario_detalles::inicio/$1', ['as'=> 'detalles_usuario']);
 $routes->post('editar_usuario/(:num)', 'Panel\Usuario_detalles::actualizar/$1', ['as'=> 'editar_usuario']);
-$routes->get('estatus_usuario/(:segment)/(:segment)', 'Panel\Usuarios::estatus/$1/$2', ['as' => 'estatus_usuario']);
+$routes->get('estatus_usuario/(:segment)/(:segment)', 'Panel\Usuarios::cambiar_estatus/$1/$2', ['as' => 'estatus_usuario']);
 $routes->get('eliminar_usuario/(:num)', 'Panel\Usuarios::eliminar/$1', ['as'=> 'eliminar_usuario']);
 
 // Rutas para el módulo de géneros (sin prefijo 'panel')
-$routes->get('generos', 'Panel\Generos::index', ['as' => 'generos']);
+$routes->get('generos', 'Panel\Generos::inicio', ['as' => 'generos']);
 
 // Crear nuevo género
-$routes->get('/generos/nuevo', 'Panel\Genero_nuevo::index', ['as' => 'nuevo_genero']);
-$routes->post('/generos/guardar', 'Panel\Genero_nuevo::registrar', ['as' => 'guardar_genero']);
+$routes->get('/generos/nuevo', 'Panel\Genero_nuevo::inicio', ['as' => 'nuevo_genero']);
+$routes->post('/generos/guardar', 'Panel\Genero_nuevo::agregar', ['as' => 'guardar_genero']);
 
 // Editar género
-$routes->get('generos/editar/(:num)', 'Panel\Genero_detalles::index/$1', ['as' => 'editar_genero']);
+$routes->get('generos/editar/(:num)', 'Panel\Genero_detalles::inicio/$1', ['as' => 'editar_genero']);
 $routes->post('generos/actualizar/(:num)', 'Panel\Genero_detalles::actualizar/$1', ['as' => 'actualizar_genero']);
-$routes->get('generos/estatus/(:segment)/(:segment)', 'Panel\Generos::estatus/$1/$2', ['as' => 'estatus_genero']);
+$routes->get('generos/estatus/(:segment)/(:segment)', 'Panel\Generos::cambiar_estatus/$1/$2', ['as' => 'estatus_genero']);
 // Eliminar género
 $routes->get('generos/eliminar/(:num)', 'Panel\Generos::eliminar/$1', ['as' => 'eliminar_genero']);
 
 
-$routes->get('panel/streaming', 'Panel\Streaming::index', ['as' => 'streaming']);
-$routes->get('panel/streaming/nuevo', 'Panel\Streaming::nuevo', ['as' => 'nuevo_streaming']);
-$routes->post('panel/streaming/guardar', 'Panel\Streaming::guardar', ['as' => 'guardar_streaming']);
+$routes->get('panel/streaming', 'Panel\Streaming::inicio', ['as' => 'streaming']);
+$routes->get('panel/streaming/nuevo', 'Panel\Streaming::agregar', ['as' => 'nuevo_streaming']);
+$routes->post('panel/streaming/guardar', 'Panel\Streaming::registrar', ['as' => 'guardar_streaming']);
 $routes->get('panel/streaming/editar/(:num)', 'Panel\Streaming::editar/$1', ['as' => 'editar_streaming']);
 $routes->post('panel/streaming/actualizar/(:num)', 'Panel\Streaming::actualizar/$1', ['as' => 'actualizar_streaming']);
 $routes->get('panel/streaming/eliminar/(:num)', 'Panel\Streaming::eliminar/$1', ['as' => 'eliminar_streaming']);
-$routes->get('panel/streaming/estatus/(:segment)/(:segment)', 'Panel\Streaming::estatus/$1/$2', ['as' => 'estatus_streaming']);
+$routes->get('panel/streaming/estatus/(:segment)/(:segment)', 'Panel\Streaming::cambiar_estatus/$1/$2', ['as' => 'estatus_streaming']);
 
 
-$routes->get('panel/videos', 'Panel\Videos::index', ['as' => 'videos']);
-$routes->get('videos/nuevo', 'Panel\Videos::nuevo', ['as' => 'nuevo_video']);
-$routes->post('videos/guardar', 'Panel\Videos::guardar', ['as' => 'guardar_video']);
+$routes->get('panel/videos', 'Panel\Videos::inicio', ['as' => 'videos']);
+$routes->get('videos/nuevo', 'Panel\Videos::agregar', ['as' => 'nuevo_video']);
+$routes->post('videos/guardar', 'Panel\Videos::registrar', ['as' => 'guardar_video']);
 $routes->get('videos/editar/(:num)', 'Panel\Videos::editar/$1', ['as' => 'editar_video']);
 $routes->post('videos/actualizar/(:num)', 'Panel\Videos::actualizar/$1', ['as' => 'actualizar_video']);
 $routes->get('videos/eliminar/(:num)', 'Panel\Videos::eliminar/$1', ['as' => 'eliminar_video']);
-$routes->get('videos/estatus/(:segment)/(:segment)', 'Panel\Videos::estatus/$1/$2', ['as' => 'estatus_video']);
+$routes->get('videos/estatus/(:segment)/(:segment)', 'Panel\Videos::cambiar_estatus/$1/$2', ['as' => 'estatus_video']);
 
 
 // Listado principal
-$routes->get('planes', 'Panel\Planes::index', ['as' => 'planes']);
+$routes->get('planes', 'Panel\Planes::inicio', ['as' => 'planes']);
 // Crear nuevo
-$routes->get('planes/nuevo', 'Panel\Planes::nuevo', ['as' => 'nuevo_plan']);
-$routes->post('planes/guardar', 'Panel\Planes::guardar', ['as' => 'guardar_plan']);
+$routes->get('planes/nuevo', 'Panel\Planes::agregar', ['as' => 'nuevo_plan']);
+$routes->post('planes/guardar', 'Panel\Planes::registrar', ['as' => 'guardar_plan']);
 // Editar
 $routes->get('planes/editar/(:num)', 'Panel\Planes::editar/$1', ['as' => 'editar_plan']);
 $routes->post('planes/actualizar/(:num)', 'Panel\Planes::actualizar/$1', ['as' => 'actualizar_plan']);
 // Cambiar estatus (segmento dinámico)
-$routes->get('planes/estatus/(:segment)/(:segment)', 'Panel\Planes::estatus/$1/$2', ['as' => 'estatus_plan']);
+$routes->get('planes/estatus/(:segment)/(:segment)', 'Panel\Planes::cambiar_estatus/$1/$2', ['as' => 'estatus_plan']);
 // Eliminar
 $routes->get('planes/eliminar/(:num)', 'Panel\Planes::eliminar/$1', ['as' => 'eliminar_plan']);
 
 
 // CRUD Usuarios-Planes
-$routes->get('usuarios-planes', 'Panel\Usuarios_Planes::index', ['as' => 'usuarios_planes']);
+$routes->get('usuarios-planes', 'Panel\Usuarios_Planes::inicio', ['as' => 'usuarios_planes']);
 $routes->get('usuarios-planes/nuevo', 'Panel\Usuarios_Planes::nuevo', ['as' => 'nuevo_usuario_plan']);
 $routes->post('usuarios-planes/guardar', 'Panel\Usuarios_Planes::guardar', ['as' => 'guardar_usuario_plan']);
 $routes->get('usuarios-planes/editar/(:num)', 'Panel\Usuarios_Planes::editar/$1', ['as' => 'editar_usuario_plan']);

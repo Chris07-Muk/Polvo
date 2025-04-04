@@ -54,7 +54,7 @@ class Videos extends BaseController
         return view($name_view, $content);
     }
 
-    public function index()
+    public function inicio()
 {
     if ($this->permiso) {
         $data = $this->load_data();
@@ -84,7 +84,7 @@ class Videos extends BaseController
 }
 
 
-public function nuevo()
+public function agregar()
 {
     $data = $this->load_data();
     $data['titulo_pagina'] = 'Nuevo Video';
@@ -98,7 +98,7 @@ public function nuevo()
     return $this->create_view('panel/videos_nuevo', $data);
 }
 
-    public function guardar()
+    public function registrar()
     {
         helper('message');
 
@@ -202,7 +202,7 @@ public function nuevo()
         return redirect()->to(route_to('videos'));
     }
 
-    public function estatus($id = 0, $estatus = 1)
+    public function cambiar_estatus($id = 0, $estatus = 1)
     {
         helper('message');
 

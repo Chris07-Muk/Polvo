@@ -63,7 +63,7 @@ class Generos extends BaseController
         return view($name_view, $content);
     }
 
-    public function index()
+    public function inicio()
     {
         if ($this->permiso) {
             return $this->create_view($this->view, $this->load_data());
@@ -96,7 +96,7 @@ class Generos extends BaseController
     return redirect()->to(route_to('generos'));
 }
 
-public function estatus($id_genero = 0, $estatus = FALSE) {
+public function cambiar_estatus($id_genero = 0, $estatus = FALSE) {
     helper('message');
 
     $tabla_generos = new \App\Models\Tabla_Generos;

@@ -52,7 +52,7 @@ class Genero_detalles extends BaseController
         return view($name_view, $content);
     }
 
-    public function index($id_genero = 0){
+    public function inicio($id_genero = 0){
         helper('message');
         if ($this->permiso) {
             $tabla_generos = new \App\Models\Tabla_Generos;

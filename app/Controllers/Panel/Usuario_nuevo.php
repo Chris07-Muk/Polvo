@@ -57,7 +57,7 @@ class Usuario_nuevo extends BaseController
     }//end make_view
 
     //Main function : index
-    public function index()
+    public function inicio()
     {
         if ($this->permiso) {
             return $this->create_view($this->view, $this->load_data());
@@ -69,7 +69,7 @@ class Usuario_nuevo extends BaseController
         }
     }// end index
 
-    public function registrar()
+    public function agregar()
 {
     helper(['message', 'filesystem']);
 

@@ -66,7 +66,7 @@ class Usuario_detalles extends BaseController
     }//end make_view
 
     //Main function : index
-    public function index($id_usuario = 0)
+    public function inicio($id_usuario = 0)
     {
         helper('message');
         if ($this->permiso) {
