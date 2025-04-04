@@ -1,101 +1,121 @@
 <?= $this->extend('plantillas/panel_base') ?>
 <?= $this->section('content') ?>
 
-<!-- ESTILOS INTEGRADOS -->
+<!-- ESTILOS NUEVOS -->
 <style>
     body {
         font-family: 'Poppins', sans-serif;
-        background-color: #F9FAFB;
-        color: #111827;
+        background-color: #F1F5F9;
+        color: #1e293b;
     }
 
     h3.card-title {
-        color: #4F46E5;
-        font-weight: 600;
+        font-weight: 700;
+        color: #0f766e;
     }
 
     .card {
+        border-radius: 14px;
         border: none;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
     }
 
     .card-header {
-        background-color: #EEF2FF;
-        border-bottom: 1px solid #ddd;
+        background-color: #e0f2f1;
+        padding: 20px;
+        border-bottom: 1px solid #cbd5e1;
     }
 
     .form-group label {
-        font-weight: 500;
-        color: #374151;
+        font-weight: 600;
+        color: #334155;
     }
 
     .form-control, .form-control-file, select {
-        border-radius: 8px;
-        border: 1px solid #CBD5E0;
-        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #cbd5e1;
+        padding: 10px 15px;
+        background-color: #ffffff;
     }
 
     .form-control:focus, select:focus {
-        border-color: #4F46E5;
-        box-shadow: 0 0 0 0.1rem rgba(79, 70, 229, 0.25);
+        border-color: #0f766e;
+        box-shadow: 0 0 0 0.15rem rgba(13, 148, 136, 0.2);
     }
 
     .btn-primary {
-        background-color: #4F46E5;
+        background-color: #0f766e;
         border: none;
-        border-radius: 8px;
         padding: 10px 20px;
+        font-weight: 600;
+        color: white;
+        border-radius: 10px;
     }
 
     .btn-primary:hover {
-        background-color: #4338CA;
+        background-color: #115e59;
+        transform: translateY(-1px);
     }
 
     .btn-secondary {
-        background-color: #6B7280;
+        background-color: #64748b;
         border: none;
-        border-radius: 8px;
         padding: 10px 20px;
+        font-weight: 600;
+        color: white;
+        border-radius: 10px;
     }
 
     .btn-secondary:hover {
-        background-color: #4B5563;
+        background-color: #475569;
+        transform: translateY(-1px);
     }
 
-    img#preview_foto {
+    #preview_foto {
         border-radius: 50%;
         object-fit: cover;
-        border: 3px solid #E5E7EB;
-        margin-bottom: 10px;
+        border: 3px solid #cbd5e1;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+
+    .card-footer {
+        background-color: #f8fafc;
+        border-top: 1px solid #e2e8f0;
+        padding: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 16px;
     }
 </style>
 
 <!-- INTERFAZ -->
 <div class="row">
-    <div class="col-md-8 offset-md-2">
+    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
         <div class="card">
-            <div class="card-header">
-                <h3 class="card-title">Registrar Nuevo Usuario</h3>
+            <div class="card-header text-center">
+                <h3 class="card-title"><i class="fas fa-user-circle me-2"></i>Registro de Usuario</h3>
             </div>
 
             <?= form_open_multipart(route_to('registrar_usuario')) ?>
             <div class="card-body">
 
-                <!-- Imagen Preview -->
+                <!-- Previsualización de imagen -->
                 <div class="form-group text-center">
-                    <label>Vista Previa de Foto</label><br>
-                    <img id="preview_foto" src="<?= base_url('perfiles/default.png') ?>" alt="Vista previa"
-                         width="120" height="120">
+                    <label>Foto de perfil</label><br>
+                    <img id="preview_foto" src="<?= base_url('perfiles/default.png') ?>" width="120" height="120" alt="Preview">
                 </div>
 
                 <div class="form-group">
-                    <label for="foto_perfil">Foto de Perfil</label>
+                    <label for="foto_perfil">Subir imagen</label>
                     <input type="file" name="foto_perfil" id="foto_perfil" class="form-control-file" accept="image/*">
                 </div>
 
                 <div class="form-group">
-                    <label for="nombre">Nombre</label>
+                    <label for="nombre">Nombre(s)</label>
                     <input type="text" name="nombre" class="form-control" required>
                 </div>
 
@@ -119,7 +139,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Correo Electrónico</label>
+                    <label for="email">Correo electrónico</label>
                     <input type="email" name="email" class="form-control" required>
                 </div>
 
@@ -129,41 +149,41 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="rol">Rol</label>
+                    <label for="rol">Rol del usuario</label>
                     <select name="rol" class="form-control" required>
                         <option value="">Seleccione un rol</option>
                         <?php foreach ($roles as $rol): ?>
-                            <option value="<?= $rol->id_rol ?>">
-                                <?= esc($rol->nombre_rol) ?>
-                            </option>
+                            <option value="<?= $rol->id_rol ?>"><?= esc($rol->nombre_rol) ?></option>
                         <?php endforeach ?>
                     </select>
                 </div>
 
             </div>
 
-            <div class="card-footer text-right">
-                <a href="<?= route_to('usuarios') ?>" class="btn btn-secondary">Cancelar</a>
-                <button type="submit" class="btn btn-primary">Guardar</button>
+            <div class="card-footer d-flex justify-content-between">
+                <a href="<?= route_to('usuarios') ?>" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left me-1"></i> Volver
+                </a>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-save me-1"></i> Guardar Usuario
+                </button>
             </div>
-
             <?= form_close() ?>
         </div>
     </div>
 </div>
 
-<!-- Script para previsualizar la imagen -->
+<!-- JS para previsualización -->
 <script>
     document.getElementById('foto_perfil').addEventListener('change', function (e) {
-        const input = e.target;
+        const file = e.target.files[0];
         const preview = document.getElementById('preview_foto');
-
-        if (input.files && input.files[0]) {
+        if (file) {
             const reader = new FileReader();
             reader.onload = function (e) {
                 preview.src = e.target.result;
             };
-            reader.readAsDataURL(input.files[0]);
+            reader.readAsDataURL(file);
         }
     });
 </script>
