@@ -49,7 +49,7 @@ class Alquileres extends BaseController
         return view($vista, $data);
     }
 
-    public function index()
+    public function inicio()
 {
     $modelo = new Tabla_Alquileres();
 
@@ -66,7 +66,7 @@ class Alquileres extends BaseController
 }
 
 
-    public function nuevo()
+    public function agregar()
     {
         $data = $this->load_data();
         $data['usuarios'] = (new Tabla_usuario())->findAll();
@@ -74,7 +74,7 @@ class Alquileres extends BaseController
         return $this->create_view('panel/alquileres_nuevo', $data);
     }
 
-    public function guardar()
+    public function registrar()
     {
         $modelo = new Tabla_Alquileres();
 
@@ -148,7 +148,7 @@ class Alquileres extends BaseController
         return redirect()->to(route_to('alquileres'));
     }
 
-    public function estatus($id)
+    public function cambiar_estatus($id)
     {
         $modelo = new Tabla_Alquileres();
         $registro = $modelo->find($id);

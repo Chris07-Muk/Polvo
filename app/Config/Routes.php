@@ -129,18 +129,18 @@ $routes->post('usuarios-planes/actualizar/(:num)', 'Panel\Usuarios_Planes::actua
 $routes->get('usuarios-planes/eliminar/(:num)', 'Panel\Usuarios_Planes::eliminar/$1', ['as' => 'eliminar_usuario_plan']);
 
     
-$routes->get('clientes', 'Panel\Clientes::index', ['as' => 'clientes']);
-$routes->get('clientes/nuevo', 'Panel\Clientes::nuevo', ['as' => 'cliente_nuevo']);
-$routes->post('clientes/guardar', 'Panel\Clientes::guardar', ['as' => 'cliente_guardar']);
+$routes->get('clientes', 'Panel\Clientes::inicio', ['as' => 'clientes']);
+$routes->get('clientes/nuevo', 'Panel\Clientes::agregar', ['as' => 'cliente_nuevo']);
+$routes->post('clientes/guardar', 'Panel\Clientes::registrar', ['as' => 'cliente_guardar']);
 $routes->get('clientes/editar/(:num)', 'Panel\Clientes::editar/$1', ['as' => 'cliente_editar']);
 $routes->post('clientes/actualizar/(:num)', 'Panel\Clientes::actualizar/$1', ['as' => 'cliente_actualizar']);
 $routes->get('clientes/eliminar/(:num)', 'Panel\Clientes::eliminar/$1', ['as' => 'cliente_eliminar']);
-$routes->get('clientes/estatus/(:num)', 'Panel\Clientes::estatus/$1', ['as' => 'estatus_cliente']);
+$routes->get('clientes/estatus/(:num)', 'Panel\Clientes::cambiar_estatus/$1', ['as' => 'estatus_cliente']);
 
 
-$routes->get('pagos', 'Panel\Pagos::index', ['as' => 'pagos']);
-$routes->get('pagos/nuevo', 'Panel\Pagos::nuevo', ['as' => 'pago_nuevo']);
-$routes->post('pagos/guardar', 'Panel\Pagos::guardar', ['as' => 'pago_guardar']);
+$routes->get('pagos', 'Panel\Pagos::inicio', ['as' => 'pagos']);
+$routes->get('pagos/nuevo', 'Panel\Pagos::agregar', ['as' => 'pago_nuevo']);
+$routes->post('pagos/guardar', 'Panel\Pagos::registar', ['as' => 'pago_guardar']);
 $routes->get('pagos/editar/(:num)', 'Panel\Pagos::editar/$1', ['as' => 'pago_editar']);
 $routes->post('pagos/actualizar/(:num)', 'Panel\Pagos::actualizar/$1', ['as' => 'pago_actualizar']);
 $routes->get('pagos/eliminar/(:num)', 'Panel\Pagos::eliminar/$1', ['as' => 'pago_eliminar']);
@@ -148,13 +148,13 @@ $routes->get('pagos/estatus/(:num)', 'Panel\Pagos::cambiar_estatus/$1', ['as' =>
 
 
 // CRUD de alquileres
-$routes->get('alquileres', 'Panel\Alquileres::index', ['as' => 'alquileres']);
-$routes->get('alquileres/nuevo', 'Panel\Alquileres::nuevo', ['as' => 'alquiler_nuevo']);
-$routes->post('alquileres/guardar', 'Panel\Alquileres::guardar', ['as' => 'alquiler_guardar']);
+$routes->get('alquileres', 'Panel\Alquileres::inicio', ['as' => 'alquileres']);
+$routes->get('alquileres/nuevo', 'Panel\Alquileres::agregar', ['as' => 'alquiler_nuevo']);
+$routes->post('alquileres/guardar', 'Panel\Alquileres::registar', ['as' => 'alquiler_guardar']);
 $routes->get('alquileres/editar/(:num)', 'Panel\Alquileres::editar/$1', ['as' => 'alquiler_editar']);
 $routes->post('alquileres/actualizar/(:num)', 'Panel\Alquileres::actualizar/$1', ['as' => 'alquiler_actualizar']);
 $routes->get('alquileres/eliminar/(:num)', 'Panel\Alquileres::eliminar/$1', ['as' => 'alquiler_eliminar']);
-$routes->get('alquileres/estatus/(:num)', 'Panel\Alquileres::estatus/$1', ['as' => 'estatus_alquiler']);
+$routes->get('alquileres/estatus/(:num)', 'Panel\Alquileres::cambiar_estatus/$1', ['as' => 'estatus_alquiler']);
 
 /*
  * --------------------------------------------------------------------

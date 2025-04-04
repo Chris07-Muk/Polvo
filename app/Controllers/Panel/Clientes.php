@@ -45,7 +45,7 @@ class Clientes extends BaseController
         return view($nombreVista, $contenido);
     }
 
-    public function index()
+    public function inicio()
     {
         if (!$this->permiso) {
             make_message(ERROR_ALERT, 'No tienes permisos para acceder a este módulo.', 'Error');
@@ -61,14 +61,14 @@ class Clientes extends BaseController
         return $this->create_view($this->view, $data);
     }
 
-    public function nuevo()
+    public function agregar()
     {
         $data = $this->load_data();
         $data['titulo_pagina'] = 'Registrar Cliente';
         return $this->create_view('panel/clientes_nuevo', $data);
     }
 
-    public function guardar()
+    public function registrar()
     {
         $modelo = new Tabla_usuario();
         $cliente = [
@@ -167,7 +167,7 @@ class Clientes extends BaseController
         return redirect()->to(route_to('clientes'));
     }
 
-    public function estatus($id = 0)
+    public function cambiar_estatus($id = 0)
 {
     $modelo = new Tabla_usuario();
     $cliente = $modelo->find($id);

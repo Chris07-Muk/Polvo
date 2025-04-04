@@ -47,7 +47,7 @@ class Pagos extends BaseController
         return view($vista, $data);
     }
 
-    public function index()
+    public function inicio()
     {
         $modelo = new Tabla_Pagos();
         $data = $this->load_data();
@@ -55,7 +55,7 @@ class Pagos extends BaseController
         return $this->create_view($this->view, $data);
     }
 
-    public function nuevo()
+    public function agregar()
     {
         $data = $this->load_data();
         $data['usuarios'] = (new Tabla_usuario())->where('estatus_usuario', 1)->findAll();
@@ -63,7 +63,7 @@ class Pagos extends BaseController
         return $this->create_view('panel/pagos_nuevo', $data);
     }
 
-    public function guardar()
+    public function registrar()
     {
         $modelo = new Tabla_Pagos();
 
