@@ -43,8 +43,8 @@ class Usuario_nuevo extends BaseController
         ];
         $data['breadcrumb_panel'] = breadcrumb_panel($data['titulo_pagina'], $breadcrumb);
     
-        // ✅ Cargar los roles desde la tabla
-        $modeloRoles = new \App\Models\Tabla_roles(); // Asegúrate de tener este modelo creado
+
+        $modeloRoles = new \App\Models\Tabla_roles(); 
         $data['roles'] = $modeloRoles->findAll();
     
         return $data;
@@ -89,13 +89,13 @@ class Usuario_nuevo extends BaseController
 
     if ($imagen && $imagen->isValid() && !$imagen->hasMoved()) {
         $nuevoNombre = $imagen->getRandomName();
-        $rutaDestino = FCPATH . 'perfiles/'; // Ya apunta a public/perfiles/
+        $rutaDestino = FCPATH . 'perfiles/'; 
 
         $imagen->move($rutaDestino, $nuevoNombre);
 
         $usuario["imagen_usuario"] = $nuevoNombre;
     } else {
-        $usuario["imagen_usuario"] = null; // o pon una imagen por defecto si prefieres
+        $usuario["imagen_usuario"] = null; 
     }
 
     // === Guardar en la base de datos ===
