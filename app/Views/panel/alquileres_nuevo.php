@@ -3,78 +3,96 @@
 <?= $this->section('css') ?>
 <style>
     .card {
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        border: none;
-        background-color: #fff;
+        background-color: #fefefe;
+        border-radius: 16px;
+        border: 1px solid #d1d5db;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
         overflow: hidden;
     }
 
     .card-header {
-        background: linear-gradient(135deg,rgb(12, 17, 182) 0%,rgb(24, 24, 185) 100%);
-        color: white;
-        padding: 20px;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
+        background-color: #f3f4f6;
+        color: #1f2937;
+        padding: 24px;
+        border-bottom: 1px solid #e5e7eb;
     }
 
     .card-title {
-        font-weight: 600;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
+        font-weight: 700;
         margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 1.25rem;
     }
 
     .form-group label {
-        font-weight: 500;
-        color: #374151;
+        font-weight: 600;
         margin-bottom: 6px;
+        color: #1f2937;
+        display: block;
     }
 
     .form-control {
-        border-radius: 8px;
-        border: 1px solid #CBD5E0;
-        padding: 10px 15px;
-        transition: all 0.3s ease;
+        border-radius: 10px;
+        border: 1px solid #cbd5e1;
+        padding: 10px 14px;
+        font-size: 0.95rem;
+        transition: border-color 0.2s ease;
+        width: 100%;
     }
 
     .form-control:focus {
-        border-color:rgb(14, 29, 190);
-        box-shadow: 0 0 0 0.15rem rgba(91, 33, 182, 0.25);
+        border-color: #2563eb;
+        box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+        outline: none;
     }
 
     .card-footer {
-        background-color: #F8FAFC;
-        border-top: 1px solid #E5E7EB;
-        padding: 20px;
+        background-color: #f9fafb;
+        padding: 20px 24px;
+        border-top: 1px solid #e5e7eb;
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        flex-wrap: wrap;
     }
 
     .btn {
-        border-radius: 8px;
         padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 0.95rem;
         font-weight: 500;
         transition: all 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
     }
 
     .btn-primary {
-        background-color:rgb(27, 44, 198);
+        background-color: #2563eb;
         border: none;
         color: white;
     }
 
     .btn-primary:hover {
-        background-color: #4C1D95;
-        transform: translateY(-1px);
+        background-color: #1d4ed8;
+        transform: scale(1.03);
     }
 
     .btn-secondary {
-        background-color: #6B7280;
-        border: none;
+        background-color: #6b7280;
         color: white;
+        border: none;
     }
 
     .btn-secondary:hover {
-        background-color: #4B5563;
-        transform: translateY(-1px);
+        background-color: #4b5563;
+        transform: scale(1.03);
     }
 </style>
 <?= $this->endSection() ?>
@@ -83,10 +101,10 @@
 <section class="content">
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-9 col-lg-8">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title"><i class="fas fa-film mr-2"></i> Nuevo Alquiler</h3>
+                        <h3 class="card-title"><i class="fas fa-film"></i> Nuevo Alquiler</h3>
                     </div>
 
                     <?= form_open(route_to('alquiler_guardar')) ?>
@@ -126,12 +144,12 @@
                         </div>
                     </div>
 
-                    <div class="card-footer text-right">
-                        <a href="<?= route_to('alquileres') ?>" class="btn btn-secondary">
-                            <i class="fas fa-times mr-1"></i> Cancelar
+                    <div class="card-footer">
+                        <a href="<?= route_to('admin_alquileres') ?>" class="btn btn-secondary">
+                            <i class="fas fa-times"></i> Cancelar
                         </a>
                         <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-save mr-1"></i> Registrar Alquiler
+                            <i class="fas fa-save"></i> Registrar Alquiler
                         </button>
                     </div>
                     <?= form_close() ?>

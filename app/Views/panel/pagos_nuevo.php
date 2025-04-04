@@ -3,78 +3,95 @@
 <?= $this->section('css') ?>
 <style>
     .card {
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        border: none;
+        background-color: #fefefe;
+        border-radius: 16px;
+        border: 1px solid #d1d5db;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
     }
 
     .card-header {
-        background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
-        color: white;
-        padding: 20px;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
+        background-color: #f3f4f6;
+        color: #1f2937;
+        padding: 24px;
+        border-bottom: 1px solid #e5e7eb;
     }
 
     .card-title {
-        font-weight: 600;
-        font-size: 1.5rem;
-        margin-bottom: 0;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 
-    .form-control,
-    select {
-        border-radius: 8px;
-        border: 1px solid #CBD5E0;
-        padding: 10px 15px;
-        transition: all 0.3s ease;
-    }
-
-    .form-control:focus,
-    select:focus {
-        border-color: #3B82F6;
-        box-shadow: 0 0 0 0.15rem rgba(59, 130, 246, 0.25);
+    .form-group {
+        margin-bottom: 1.25rem;
     }
 
     .form-group label {
-        font-weight: 500;
-        color: #374151;
+        font-weight: 600;
         margin-bottom: 6px;
+        color: #1f2937;
+        display: block;
+    }
+
+    .form-control {
+        border-radius: 10px;
+        border: 1px solid #cbd5e1;
+        padding: 10px 14px;
+        font-size: 0.95rem;
+        transition: border-color 0.2s ease;
+        width: 100%;
+    }
+
+    .form-control:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+        outline: none;
     }
 
     .card-footer {
-        background-color: #F8FAFC;
-        border-top: 1px solid #E2E8F0;
-        padding: 20px;
+        background-color: #f9fafb;
+        padding: 20px 24px;
+        border-top: 1px solid #e5e7eb;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     .btn {
-        border-radius: 8px;
         padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 0.95rem;
         font-weight: 500;
         transition: all 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
     }
 
     .btn-primary {
-        background-color:rgb(17, 86, 197);
+        background-color: #2563eb;
         border: none;
         color: white;
     }
 
     .btn-primary:hover {
-        background-color:rgb(17, 69, 181);
-        transform: translateY(-1px);
+        background-color: #1d4ed8;
+        transform: scale(1.03);
     }
 
     .btn-secondary {
-        background-color: #6B7280;
+        background-color: #6b7280;
         border: none;
         color: white;
     }
 
     .btn-secondary:hover {
-        background-color: #4B5563;
-        transform: translateY(-1px);
+        background-color: #4b5563;
+        transform: scale(1.03);
     }
 </style>
 <?= $this->endSection() ?>
@@ -86,23 +103,23 @@
             <div class="col-md-10 col-lg-8">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title"><i class="fas fa-money-check-alt mr-2"></i>Registrar nuevo pago</h3>
+                        <h3 class="card-title"><i class="fas fa-file-invoice-dollar"></i> Registrar Pago</h3>
                     </div>
 
                     <?= form_open(route_to('pago_guardar')) ?>
                     <div class="card-body">
                         <div class="form-group">
-                            <label for="fecha_registro_pago">Fecha de registro</label>
+                            <label for="fecha_registro_pago">Fecha de Registro</label>
                             <input type="date" name="fecha_registro_pago" class="form-control" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="monto_pago">Monto del pago</label>
+                            <label for="monto_pago">Monto del Pago</label>
                             <input type="number" name="monto_pago" class="form-control" step="0.01" min="0" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="tarjeta_pago">Tarjeta asociada</label>
+                            <label for="tarjeta_pago">Tarjeta Asociada</label>
                             <input type="text" name="tarjeta_pago" class="form-control" maxlength="32" placeholder="**** **** **** 1234" required>
                         </div>
 
@@ -131,12 +148,12 @@
                         </div>
                     </div>
 
-                    <div class="card-footer text-right">
+                    <div class="card-footer">
                         <a href="<?= route_to('pagos') ?>" class="btn btn-secondary">
-                            <i class="fas fa-times mr-1"></i> Cancelar
+                            <i class="fas fa-ban"></i> Cancelar
                         </a>
-                        <button type="submit" class="btn btn-primary ml-2">
-                            <i class="fas fa-save mr-1"></i> Guardar Pago
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Guardar Pago
                         </button>
                     </div>
                     <?= form_close() ?>

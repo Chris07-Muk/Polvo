@@ -3,57 +3,120 @@
 <?= $this->section('css') ?>
 <style>
     .card {
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        border: none;
+        background-color: #fefefe;
+        border-radius: 16px;
+        border: 1px solid #d1d5db;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
     }
 
     .card-header {
-        background: linear-gradient(135deg, #4F46E5 0%, #4338CA 100%);
-        color: white;
-        padding: 20px;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
+        background-color: #f3f4f6;
+        color: #1f2937;
+        padding: 24px;
+        border-bottom: 1px solid #e5e7eb;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .card-title {
-        font-weight: 600;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
         margin: 0;
     }
 
-    .btn-success, .btn-warning, .btn-danger {
-        border-radius: 8px;
-        font-weight: 500;
-        padding: 6px 12px;
+    .btn-outline-success {
+        border: 2px solid #22c55e;
+        background-color: transparent;
+        color: #22c55e;
+        padding: 8px 16px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border-radius: 10px;
+        transition: all 0.2s ease;
     }
 
-    .btn-success:hover {
-        background-color: #38a169;
-        transform: translateY(-1px);
+    .btn-outline-success:hover {
+        background-color: #22c55e;
+        color: white;
+        transform: scale(1.03);
     }
 
-    .btn-warning:hover {
-        background-color: #d69e2e;
-        transform: translateY(-1px);
-    }
-
-    .btn-danger:hover {
-        background-color: #e53e3e;
-        transform: translateY(-1px);
-    }
-
-    .table th, .table td {
-        vertical-align: middle;
+    .table {
+        margin-top: 10px;
     }
 
     .table thead {
-        background-color: #4F46E5;
+        background-color: #e2e8f0;
+    }
+
+    .table th {
+        padding: 14px;
+        font-weight: 700;
+        color: #1f2937;
+        text-align: center;
+    }
+
+    .table td {
+        padding: 12px;
+        font-size: 0.95rem;
+        color: #374151;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f9fafb;
+    }
+
+    .btn-sm {
+        padding: 7px 12px;
+        font-size: 0.85rem;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+
+    .btn-success {
+        background-color: #22c55e;
+        border: none;
         color: white;
     }
 
-    .card-body {
-        background-color: #ffffff;
+    .btn-success:hover {
+        background-color: #16a34a;
+    }
+
+    .btn-warning {
+        background-color: #fbbf24;
+        border: none;
+        color: #1f2937;
+    }
+
+    .btn-warning:hover {
+        background-color: #f59e0b;
+    }
+
+    .btn-danger {
+        background-color: #ef4444;
+        border: none;
+        color: white;
+    }
+
+    .btn-danger:hover {
+        background-color: #dc2626;
+    }
+
+    .alert-info {
+        background-color: #e0f2fe;
+        color: #0369a1;
+        border: 1px solid #bae6fd;
+        padding: 16px;
+        border-radius: 10px;
+        text-align: center;
     }
 </style>
 <?= $this->endSection() ?>
@@ -64,16 +127,16 @@
         <div class="row justify-content-center">
             <div class="col-md-11">
                 <div class="card">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                        <h3 class="card-title"><i class="fas fa-credit-card mr-2"></i>Pagos Registrados</h3>
-                        <a href="<?= route_to('pago_nuevo') ?>" class="btn btn-success btn-sm">
-                            <i class="fas fa-plus-circle mr-1"></i> Nuevo Pago
+                    <div class="card-header">
+                        <a href="<?= route_to('pago_nuevo') ?>" class="btn-outline-success">
+                            <i class="fas fa-plus-circle"></i> Nuevo Pago
                         </a>
+                        <h3 class="card-title"><i class="fas fa-credit-card"></i> Pagos Registrados</h3>
                     </div>
                     <div class="card-body">
                         <?php if (count($pagos) > 0): ?>
                             <div class="table-responsive">
-                                <table class="table table-bordered table-hover text-center">
+                                <table class="table table-hover table-bordered">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -99,17 +162,17 @@
                                                     <?php if ($p->estatus_pago == 1): ?>
                                                         <a href="<?= route_to('pago_estatus', $p->id_pago) ?>"
                                                            class="btn btn-success btn-sm" title="Marcar como Rechazado">
-                                                            <i class="fas fa-check-circle mr-1"></i> Aceptado
+                                                            <i class="fas fa-check-circle"></i> Aceptado
                                                         </a>
                                                     <?php elseif ($p->estatus_pago == 0): ?>
                                                         <a href="<?= route_to('pago_estatus', $p->id_pago) ?>"
                                                            class="btn btn-warning btn-sm" title="Aceptar/Rechazar">
-                                                            <i class="fas fa-clock mr-1"></i> Pendiente
+                                                            <i class="fas fa-clock"></i> Pendiente
                                                         </a>
                                                     <?php else: ?>
                                                         <a href="<?= route_to('pago_estatus', $p->id_pago) ?>"
                                                            class="btn btn-danger btn-sm" title="Marcar como Aceptado">
-                                                            <i class="fas fa-times-circle mr-1"></i> Rechazado
+                                                            <i class="fas fa-times-circle"></i> Rechazado
                                                         </a>
                                                     <?php endif; ?>
                                                 </td>
@@ -130,7 +193,7 @@
                                 </table>
                             </div>
                         <?php else: ?>
-                            <div class="alert alert-info text-center">No hay pagos registrados.</div>
+                            <div class="alert alert-info mt-3">No hay pagos registrados.</div>
                         <?php endif ?>
                     </div>
                 </div>

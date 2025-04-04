@@ -2,116 +2,142 @@
 
 <?= $this->section('css') ?>
 <style>
+    /* Tarjeta contenedora */
     .card {
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        border: none;
+        background-color: #fefefe;
+        border-radius: 16px;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+        border: 1px solid #d1d5db;
         overflow: hidden;
-        background-color: #fff;
     }
 
     .card-header {
-        background: linear-gradient(135deg,rgb(17, 60, 205) 0%,rgb(13, 20, 195) 100%);
-        color: white;
-        padding: 20px;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
+        background-color: #f3f4f6;
+        color: #1f2937;
+        padding: 24px;
+        border-bottom: 1px solid #e5e7eb;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     .card-title {
-        font-weight: 600;
-        font-size: 1.4rem;
+        font-size: 1.6rem;
+        font-weight: 700;
         margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 
-    .btn-agregar {
-        background-color: #10B981;
-        border: none;
-        padding: 8px 15px;
-        border-radius: 8px;
-        color: white;
-        font-weight: 500;
-        transition: all 0.3s ease;
+    .btn-outline {
+        border: 2px solid #2563eb;
+        color: #2563eb;
+        background-color: transparent;
+        padding: 10px 18px;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: all 0.25s ease;
+        box-shadow: 0 0 0 transparent;
     }
 
-    .btn-agregar:hover {
-        background-color: #059669;
-        transform: translateY(-1px);
+    .btn-outline:hover {
+        background-color: #2563eb;
+        color: #ffffff;
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        transform: scale(1.04);
     }
 
+    /* Tabla */
     .table {
-        background-color: #fff;
-        border-radius: 8px;
-        overflow: hidden;
+        margin-top: 10px;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .table thead {
+        background-color: #e2e8f0;
     }
 
     .table th {
-        background-color:rgb(13, 45, 202);
-        color: white;
-        font-weight: 500;
-        vertical-align: middle;
-        text-align: center;
+        color: #1f2937;
+        font-weight: 700;
+        padding: 14px 12px;
+        text-align: left;
+        font-size: 0.95rem;
     }
 
     .table td {
+        padding: 14px 12px;
+        color: #374151;
+        font-size: 0.95rem;
+        border-bottom: 1px solid #e5e7eb;
         vertical-align: middle;
-        text-align: center;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f9fafb;
+    }
+
+    /* Badges */
+    .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-weight: 600;
+        font-size: 0.8rem;
+        padding: 6px 12px;
+        border-radius: 999px;
     }
 
     .badge-success {
-        background-color: #16A34A;
-        font-size: 0.8rem;
-        padding: 5px 10px;
-        border-radius: 12px;
+        background-color: #d1fae5;
+        color: #065f46;
     }
 
     .badge-warning {
-        background-color: #F97316;
-        color: white;
-        font-size: 0.8rem;
-        padding: 5px 10px;
-        border-radius: 12px;
+        background-color: #fef3c7;
+        color: #92400e;
     }
 
-    .btn-sm {
-        border-radius: 6px;
-        padding: 6px 10px;
-        font-size: 0.875rem;
+    /* Botones de acción */
+    .btn-action {
+        background-color: #f9fafb;
+        border: 1px solid #e5e7eb;
+        padding: 8px;
+        border-radius: 8px;
+        color: #4b5563;
+        font-size: 0.95rem;
+        transition: all 0.2s ease;
     }
 
-    .btn-warning {
-        background-color: #FACC15;
-        color: #1F2937;
-        border: none;
+    .btn-action:hover {
+        background-color: #e5e7eb;
+        color: #1f2937;
+        transform: scale(1.05);
     }
 
-    .btn-warning:hover {
-        background-color: #EAB308;
+    /* Íconos de acciones */
+    .acciones {
+        display: flex;
+        justify-content: flex-start;
+        gap: 12px;
     }
 
-    .btn-danger {
-        background-color: #EF4444;
-        border: none;
-        color: white;
-    }
-
-    .btn-danger:hover {
-        background-color: #DC2626;
-    }
-
-    .btn-info {
-        background-color: #3B82F6;
-        border: none;
-        color: white;
-    }
-
-    .btn-info:hover {
-        background-color: #2563EB;
+    /* Alerta */
+    .alert-info {
+        background-color: #e0f2fe;
+        color: #0369a1;
+        border: 1px solid #bae6fd;
+        padding: 16px;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: 500;
     }
 </style>
+
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
@@ -121,24 +147,24 @@
             <div class="col-md-11">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title"><i class="fas fa-film mr-2"></i>Alquileres Registrados</h3>
-                        <a href="<?= route_to('alquiler_nuevo') ?>" class="btn btn-agregar btn-sm">
-                            <i class="fas fa-plus-circle"></i> Nuevo Alquiler
+                        <a href="<?= route_to('alquiler_nuevo') ?>" class="btn-outline">
+                            <i class="fas fa-plus"></i> Nuevo Alquiler
                         </a>
+                        <h3 class="card-title"><i class="fas fa-list me-2"></i> Lista de Alquileres</h3>
                     </div>
                     <div class="card-body">
                         <?php if (count($alquileres) > 0): ?>
                             <div class="table-responsive">
-                                <table class="table table-bordered table-hover text-center">
+                                <table class="table">
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Usuario</th>
-                                            <th>Streaming</th>
+                                            <th>Cliente</th>
+                                            <th>Plataforma</th>
                                             <th>Inicio</th>
                                             <th>Fin</th>
                                             <th>Estatus</th>
-                                            <th>Acciones</th>
+                                            <th>Opciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -151,21 +177,23 @@
                                                 <td><?= esc($a->fecha_fin_alquiler) ?></td>
                                                 <td>
                                                     <?php if ($a->estatus_alquiler == 1): ?>
-                                                        <span class="badge badge-success">Culminado</span>
+                                                        <span class="badge-success">Culminado</span>
                                                     <?php else: ?>
-                                                        <span class="badge badge-warning">En proceso</span>
+                                                        <span class="badge-warning">En proceso</span>
                                                     <?php endif ?>
                                                 </td>
                                                 <td>
-                                                    <a href="<?= route_to('alquiler_editar', $a->id_alquiler) ?>" class="btn btn-warning btn-sm" title="Editar">
-                                                        <i class="fas fa-edit"></i>
-                                                    </a>
-                                                    <a href="<?= route_to('alquiler_eliminar', $a->id_alquiler) ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Eliminar este alquiler?')" title="Eliminar">
-                                                        <i class="fas fa-trash-alt"></i>
-                                                    </a>
-                                                    <a href="<?= route_to('estatus_alquiler', $a->id_alquiler) ?>" class="btn btn-info btn-sm" title="Cambiar estatus">
-                                                        <i class="fas fa-sync-alt"></i>
-                                                    </a>
+                                                    <div class="acciones">
+                                                        <a href="<?= route_to('alquiler_editar', $a->id_alquiler) ?>" class="btn-action" title="Editar">
+                                                            <i class="fas fa-edit"></i>
+                                                        </a>
+                                                        <a href="<?= route_to('alquiler_eliminar', $a->id_alquiler) ?>" class="btn-action" onclick="return confirm('¿Eliminar este alquiler?')" title="Eliminar">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </a>
+                                                        <a href="<?= route_to('estatus_alquiler', $a->id_alquiler) ?>" class="btn-action" title="Cambiar estatus">
+                                                            <i class="fas fa-sync-alt"></i>
+                                                        </a>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         <?php endforeach ?>
@@ -173,7 +201,7 @@
                                 </table>
                             </div>
                         <?php else: ?>
-                            <div class="alert alert-info text-center">No hay alquileres registrados.</div>
+                            <div class="alert alert-info mt-3">No hay alquileres registrados por el momento.</div>
                         <?php endif ?>
                     </div>
                 </div>

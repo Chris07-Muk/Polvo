@@ -3,78 +3,99 @@
 <?= $this->section('css') ?>
 <style>
     .card {
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        border: none;
+        background-color: #fefefe;
+        border-radius: 16px;
+        border: 1px solid #d1d5db;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
     }
 
     .card-header {
-        background: linear-gradient(135deg, #6366F1 0%, #4338CA 100%);
-        color: white;
-        padding: 20px;
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
+        background-color: #f3f4f6;
+        color: #1f2937;
+        padding: 24px;
+        border-bottom: 1px solid #e5e7eb;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
     }
 
     .card-title {
-        font-weight: 600;
-        font-size: 1.5rem;
-        margin-bottom: 0;
+        font-size: 1.6rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
     }
 
-    .form-control,
-    select {
-        border-radius: 8px;
-        border: 1px solid #CBD5E0;
-        padding: 10px 15px;
-        transition: all 0.3s ease;
-    }
-
-    .form-control:focus,
-    select:focus {
-        border-color: #6366F1;
-        box-shadow: 0 0 0 0.15rem rgba(99, 102, 241, 0.25);
+    .form-group {
+        margin-bottom: 1.25rem;
     }
 
     .form-group label {
-        font-weight: 500;
-        color: #374151;
+        font-weight: 600;
         margin-bottom: 6px;
+        color: #1f2937;
+        display: block;
+    }
+
+    .form-control {
+        border-radius: 10px;
+        border: 1px solid #cbd5e1;
+        padding: 10px 14px;
+        font-size: 0.95rem;
+        transition: border-color 0.2s ease;
+        width: 100%;
+    }
+
+    .form-control:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+        outline: none;
     }
 
     .card-footer {
-        background-color: #F8FAFC;
-        border-top: 1px solid #E2E8F0;
-        padding: 20px;
+        background-color: #f9fafb;
+        padding: 20px 24px;
+        border-top: 1px solid #e5e7eb;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     .btn {
-        border-radius: 8px;
         padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 0.95rem;
         font-weight: 500;
         transition: all 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
     }
 
     .btn-primary {
-        background-color: #6366F1;
+        background-color: #2563eb;
         border: none;
         color: white;
     }
 
     .btn-primary:hover {
-        background-color: #4338CA;
-        transform: translateY(-1px);
+        background-color: #1d4ed8;
+        transform: scale(1.03);
     }
 
     .btn-secondary {
-        background-color:rgb(33, 176, 1);
+        background-color: #10b981;
         border: none;
         color: white;
     }
 
     .btn-secondary:hover {
-        background-color:rgb(0, 207, 38);
-        transform: translateY(-1px);
+        background-color: #059669;
+        transform: scale(1.03);
     }
 </style>
 <?= $this->endSection() ?>
@@ -85,10 +106,10 @@
         <div class="row justify-content-center">
             <div class="col-md-10 col-lg-8">
                 <div class="card">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                        <h3 class="card-title"><i class="fas fa-edit mr-2"></i>Editar Pago</h3>
+                    <div class="card-header">
+                        <h3 class="card-title"><i class="fas fa-pen-to-square"></i> Editar Pago</h3>
                         <a href="<?= route_to('pagos') ?>" class="btn btn-secondary btn-sm">
-                            <i class="fas fa-arrow-left mr-1"></i> Volver
+                            <i class="fas fa-rotate-left"></i> Volver
                         </a>
                     </div>
 
@@ -147,9 +168,9 @@
                         </div>
 
                     </div>
-                    <div class="card-footer text-right">
+                    <div class="card-footer">
                         <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-save mr-1"></i> Guardar Cambios
+                            <i class="fas fa-floppy-disk"></i> Guardar Cambios
                         </button>
                     </div>
                     <?= form_close() ?>
