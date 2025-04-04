@@ -1,0 +1,46 @@
+ERROR - 2025-04-04 00:44:08 --> Error connecting to the database: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+CRITICAL - 2025-04-04 00:44:08 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+#0 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\Model.php(183): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\xampp\htdocs\Polvo\app\Models\Tabla_Generos.php(22): CodeIgniter\BaseModel->findAll()
+#5 C:\xampp\htdocs\Polvo\app\Controllers\Portal\Genero.php(35): App\Models\Tabla_Generos->get_all()
+#6 C:\xampp\htdocs\Polvo\app\Controllers\Portal\Genero.php(45): App\Controllers\Portal\Genero->load_data()
+#7 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Portal\Genero->index()
+#8 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Portal\Genero))
+#9 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Polvo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+ERROR - 2025-04-04 00:45:09 --> Error connecting to the database: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+CRITICAL - 2025-04-04 00:45:09 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+#0 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id_...', Array, false)
+#2 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\xampp\htdocs\Polvo\app\Models\Tabla_usuario.php(87): CodeIgniter\BaseModel->first()
+#5 C:\xampp\htdocs\Polvo\app\Controllers\Usuario\InicioSesion.php(44): App\Models\Tabla_usuario->verificar_usuario('ronaldo@gmail.c...', 'a665a45920422f9...')
+#6 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#7 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#8 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Polvo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+ERROR - 2025-04-04 00:45:17 --> Error connecting to the database: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+CRITICAL - 2025-04-04 00:45:17 --> Unable to connect to the database.
+Main connection [MySQLi]: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+#0 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `u`.`id_...', Array, false)
+#2 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#4 C:\xampp\htdocs\Polvo\app\Models\Tabla_usuario.php(87): CodeIgniter\BaseModel->first()
+#5 C:\xampp\htdocs\Polvo\app\Controllers\Usuario\InicioSesion.php(44): App\Models\Tabla_usuario->verificar_usuario('ronaldo@gmail.c...', 'a665a45920422f9...')
+#6 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\InicioSesion->iniciar_sesion()
+#7 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\InicioSesion))
+#8 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\Polvo\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\Polvo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}

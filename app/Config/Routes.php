@@ -55,6 +55,8 @@ $routes->get('/ver-alquiler/(:segment)', 'Portal\Genero::verAlquiler/$1', ['as' 
 
 
 //rutas login
+$routes->get('registro', 'Usuario\Nuevo_Usuario_Portal::index');
+$routes->post('registrar_usuario_portal', 'Usuario\Nuevo_Usuario_Portal::registrar', ['as' => 'registrar_usuario_portal']);
 $routes->get('/inicio', 'Usuario/InicioSesion::index', ['as'=> 'inicio']);
 $routes->get('/dashboard', 'Panel/Dashboard::index', ['as'=> 'dashboard']);
 $routes->get('/perfil', 'Usuario\Perfil::index', ['as' => 'perfil']);
