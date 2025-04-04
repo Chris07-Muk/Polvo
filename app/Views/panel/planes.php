@@ -10,11 +10,11 @@
 
     h4 {
         font-weight: 600;
-        color: #4F46E5;
+        color: #10B981;
     }
 
     .btn-agregar {
-        background-color: #4F46E5;
+        background-color: #10B981;
         color: white;
         border-radius: 8px;
         padding: 10px 20px;
@@ -24,17 +24,17 @@
     }
 
     .btn-agregar:hover {
-        background-color: #4338CA;
+        background-color: #047857;
         transform: translateY(-1px);
     }
 
     .table thead {
-        background-color: #4F46E5;
+        background-color: #10B981;
         color: white;
     }
 
     .table-hover tbody tr:hover {
-        background-color: #EEF2FF;
+        background-color: #ECFDF5;
     }
 
     .btn-sm {
@@ -43,6 +43,7 @@
         font-weight: 500;
         color: white;
         margin: 2px;
+        transition: 0.2s;
     }
 
     .btn-warning {
@@ -60,16 +61,16 @@
     }
 
     .btn-success:hover {
-        background-color: #059669;
+        background-color: #047857;
     }
 
     .btn-info {
-        background-color: #06B6D4;
+        background-color: #3B82F6;
         border: none;
     }
 
     .btn-info:hover {
-        background-color: #0891B2;
+        background-color: #2563EB;
     }
 
     .btn-danger {
@@ -84,15 +85,17 @@
     .badge-success {
         background-color: #10B981;
         font-size: 0.85rem;
-        padding: 5px 10px;
+        padding: 5px 12px;
         border-radius: 12px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
 
     .badge-danger {
         background-color: #EF4444;
         font-size: 0.85rem;
-        padding: 5px 10px;
+        padding: 5px 12px;
         border-radius: 12px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
 </style>
 <?= $this->endSection() ?>
@@ -100,10 +103,10 @@
 <?= $this->section('content') ?>
 <div class="row">
     <div class="col-12">
-        <h4 class="mb-4">Planes Disponibles</h4>
+        <h4 class="mb-4"><i class="fas fa-list-alt mr-2"></i>Planes Disponibles</h4>
 
         <a href="<?= route_to('nuevo_plan') ?>" class="btn btn-agregar mb-3">
-            <i class="fas fa-plus"></i> Nuevo Plan
+            <i class="fas fa-plus-circle"></i> Nuevo Plan
         </a>
 
         <div class="table-responsive">
