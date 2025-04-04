@@ -15,7 +15,7 @@
     }
 
     .card-header {
-        background: linear-gradient(135deg, #4F46E5 0%, #4338CA 100%);
+        background: linear-gradient(135deg, #10B981 0%, #047857 100%);
         color: white;
         padding: 20px;
         border-top-left-radius: 12px;
@@ -36,8 +36,8 @@
     }
 
     .form-control:focus, select:focus {
-        border-color: #4F46E5;
-        box-shadow: 0 0 0 0.15rem rgba(79, 70, 229, 0.2);
+        border-color: #10B981;
+        box-shadow: 0 0 0 0.15rem rgba(16, 185, 129, 0.25);
     }
 
     .form-group label {
@@ -54,13 +54,13 @@
     }
 
     .btn-primary {
-        background-color: #4F46E5;
+        background-color: #10B981;
         border: none;
         color: white;
     }
 
     .btn-primary:hover {
-        background-color: #4338CA;
+        background-color: #047857;
         transform: translateY(-1px);
     }
 
@@ -76,8 +76,8 @@
     }
 
     .card-footer {
-        background-color: #F8FAFC;
-        border-top: 1px solid #E2E8F0;
+        background-color: #F0FDF4;
+        border-top: 1px solid #D1FAE5;
         padding: 20px;
     }
 </style>
@@ -89,7 +89,7 @@
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title">
-                    <i class="fas fa-user-plus mr-2"></i>Asignar Nuevo Plan a Usuario
+                    <i class="fas fa-seedling mr-2"></i>Asignar Nuevo Plan a Usuario
                 </h3>
             </div>
 

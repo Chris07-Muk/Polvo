@@ -4,19 +4,19 @@
 <style>
     body {
         font-family: 'Poppins', sans-serif;
-        background-color: #F9FAFB;
+        background-color: #F3F4F6;
         color: #111827;
     }
 
     h4 {
         font-weight: 600;
-        color: #4F46E5;
+        color: #10B981;
     }
 
     .btn-agregar {
-        background-color: #4F46E5;
+        background-color: #10B981;
         color: white;
-        border-radius: 8px;
+        border-radius: 10px;
         padding: 10px 20px;
         font-weight: 500;
         transition: all 0.3s ease;
@@ -24,8 +24,7 @@
     }
 
     .btn-agregar:hover {
-        background-color: #4338CA;
-        color: white;
+        background-color: #059669;
         transform: translateY(-1px);
     }
 
@@ -36,26 +35,36 @@
     }
 
     .form-inline select {
-        border-radius: 8px;
+        border-radius: 10px;
         border: 1px solid #CBD5E0;
-        padding: 6px 12px;
+        padding: 8px 14px;
+        min-width: 200px;
+    }
+
+    .form-inline {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     .table th {
-        background-color: #4F46E5;
+        background-color: #10B981;
         color: white;
         text-align: center;
     }
 
     .table-hover tbody tr:hover {
-        background-color: #EEF2FF;
+        background-color: #ECFDF5;
     }
 
     .btn-sm {
-        border-radius: 6px;
-        padding: 6px 10px;
+        border-radius: 8px;
+        padding: 6px 12px;
+        font-weight: 500;
         color: white;
         margin: 2px;
+        font-size: 0.85rem;
     }
 
     .btn-warning {
@@ -118,7 +127,7 @@
 <?= $this->section('content') ?>
 <div class="row">
     <div class="col-12">
-        <h4 class="mb-4">Listado de Videos</h4>
+        <h4 class="mb-4">🎬 Listado de Videos</h4>
 
         <!-- BOTÓN AGREGAR VIDEO -->
         <a href="<?= route_to('nuevo_video') ?>" class="btn btn-agregar mb-3">
@@ -127,12 +136,11 @@
 
         <!-- FILTRO POR STREAMING -->
         <form method="get" action="<?= route_to('videos') ?>" class="form-inline mb-3">
-            <label for="id_streaming">Filtrar por Título:</label>
-            <select name="id_streaming" id="id_streaming" class="form-control ml-2" onchange="this.form.submit()">
+            <label for="id_streaming"><i class="fas fa-film mr-1"></i> Filtrar por Título:</label>
+            <select name="id_streaming" id="id_streaming" class="form-control" onchange="this.form.submit()">
                 <option value="">-- Todos --</option>
                 <?php foreach ($streamings as $stream): ?>
-                    <option value="<?= $stream->id_streaming ?>"
-                        <?= ($filtro_streaming == $stream->id_streaming) ? 'selected' : '' ?>>
+                    <option value="<?= $stream->id_streaming ?>" <?= ($filtro_streaming == $stream->id_streaming) ? 'selected' : '' ?>>
                         <?= esc($stream->nombre_streaming) ?>
                     </option>
                 <?php endforeach ?>
@@ -145,7 +153,7 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Archivo</th>
+                        <th>Vista previa</th>
                         <th>Nombre Temporada</th>
                         <th>Temporada</th>
                         <th>Capítulo</th>
@@ -161,13 +169,13 @@
                             <td>
                                 <video width="150" height="90" controls>
                                     <source src="<?= base_url('videos/' . $video->video) ?>" type="video/mp4">
-                                    Tu navegador no soporta la reproducción de video.
+                                    Tu navegador no soporta el video.
                                 </video>
                             </td>
                             <td><?= esc($video->nombre_temporada) ?></td>
                             <td><?= esc($video->video_temporada) ?></td>
                             <td><?= esc($video->capitulo_temporada) ?></td>
-                            <td style="max-width: 300px; overflow-wrap: break-word;">
+                            <td style="max-width: 300px; word-break: break-word;">
                                 <?= esc($video->descripcion_capitulo_temporada) ?>
                             </td>
                             <td>
@@ -178,7 +186,6 @@
                                 <?php endif ?>
                             </td>
                             <td class="text-center">
-                                <!-- Estatus -->
                                 <?php if ($video->estatus_video == 1): ?>
                                     <a href="<?= route_to('estatus_video', $video->id_video, -1) ?>"
                                        class="btn btn-sm btn-warning"
@@ -195,14 +202,12 @@
                                     </a>
                                 <?php endif ?>
 
-                                <!-- Editar -->
                                 <a href="<?= route_to('editar_video', $video->id_video) ?>"
                                    class="btn btn-sm btn-info"
                                    title="Editar">
                                     <i class="fas fa-edit"></i>
                                 </a>
 
-                                <!-- Eliminar -->
                                 <a href="<?= route_to('eliminar_video', $video->id_video) ?>"
                                    class="btn btn-sm btn-danger"
                                    title="Eliminar"

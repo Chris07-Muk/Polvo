@@ -4,7 +4,7 @@
 <style>
     body {
         font-family: 'Poppins', sans-serif;
-        background-color: #F9FAFB;
+        background-color: #F3F4F6;
         color: #111827;
     }
 
@@ -18,8 +18,9 @@
 
     h4 {
         font-weight: 600;
-        color: #4F46E5;
+        color: #10B981;
         margin-bottom: 25px;
+        text-align: center;
     }
 
     .form-group label {
@@ -28,21 +29,33 @@
         margin-bottom: 6px;
     }
 
-    .form-control, .form-control-file, select, textarea {
+    .form-control,
+    .form-control-file,
+    select,
+    textarea {
         border-radius: 8px;
         border: 1px solid #CBD5E0;
         padding: 10px;
         transition: all 0.3s ease;
     }
 
-    .form-control:focus, select:focus, textarea:focus {
-        border-color: #4F46E5;
-        box-shadow: 0 0 0 0.15rem rgba(79, 70, 229, 0.2);
+    .form-control:focus,
+    select:focus,
+    textarea:focus {
+        border-color: #10B981;
+        box-shadow: 0 0 0 0.15rem rgba(16, 185, 129, 0.25);
+    }
+
+    .form-inline {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 25px;
     }
 
     .form-inline label {
         font-weight: 500;
-        margin-right: 10px;
         color: #374151;
     }
 
@@ -50,6 +63,7 @@
         border-radius: 8px;
         border: 1px solid #CBD5E0;
         padding: 6px 12px;
+        min-width: 200px;
     }
 
     .btn {
@@ -60,13 +74,13 @@
     }
 
     .btn-success {
-        background-color: #4F46E5;
+        background-color: #10B981;
         border: none;
         color: white;
     }
 
     .btn-success:hover {
-        background-color: #4338CA;
+        background-color: #059669;
         transform: translateY(-1px);
     }
 
@@ -87,12 +101,12 @@
 <div class="row justify-content-center">
     <div class="col-md-10 col-lg-8">
         <div class="card">
-            <h4 class="text-center"><i class="fas fa-video mr-2"></i>Nuevo Video</h4>
+            <h4><i class="fas fa-video mr-2"></i> Nuevo Video</h4>
 
             <!-- FILTRO POR STREAMING -->
-            <form method="get" class="form-inline mb-4">
-                <label for="id_streaming">Filtrar por título:</label>
-                <select name="id_streaming" id="id_streaming" class="form-control ml-2" onchange="this.form.submit()">
+            <form method="get" class="form-inline">
+                <label for="id_streaming">🎞️ Filtrar por título:</label>
+                <select name="id_streaming" id="id_streaming" class="form-control" onchange="this.form.submit()">
                     <option value="">-- Todos --</option>
                     <?php foreach ($streamings as $item): ?>
                         <option value="<?= $item->id_streaming ?>" <?= ($filtro_streaming == $item->id_streaming) ? 'selected' : '' ?>>
@@ -105,32 +119,32 @@
             <?= form_open_multipart(route_to('guardar_video')) ?>
 
             <div class="form-group">
-                <label for="video">Archivo de Video (.mp4)</label>
+                <label for="video">📁 Archivo de Video (.mp4)</label>
                 <input type="file" name="video" class="form-control-file" accept="video/mp4" required>
             </div>
 
             <div class="form-group">
-                <label for="nombre_temporada">Nombre de la Temporada</label>
+                <label for="nombre_temporada">📺 Nombre de la Temporada</label>
                 <input type="text" name="nombre_temporada" class="form-control" placeholder="Ej: Parte 1, Temporada 2" required>
             </div>
 
             <div class="form-group">
-                <label for="video_temporada">Número de Temporada</label>
+                <label for="video_temporada">#️⃣ Número de Temporada</label>
                 <input type="number" name="video_temporada" class="form-control" min="1" required>
             </div>
 
             <div class="form-group">
-                <label for="capitulo_temporada">Número de Capítulo</label>
+                <label for="capitulo_temporada">🎞️ Número de Capítulo</label>
                 <input type="number" name="capitulo_temporada" class="form-control" min="1" required>
             </div>
 
             <div class="form-group">
-                <label for="descripcion_capitulo_temporada">Descripción del Capítulo</label>
+                <label for="descripcion_capitulo_temporada">📝 Descripción del Capítulo</label>
                 <textarea name="descripcion_capitulo_temporada" class="form-control" rows="4" placeholder="Breve resumen del episodio..." required></textarea>
             </div>
 
             <div class="form-group">
-                <label for="id_streaming">Título (Streaming) Asociado</label>
+                <label for="id_streaming">🎬 Título (Streaming) Asociado</label>
                 <select name="id_streaming" class="form-control" required>
                     <option value="">Seleccione un título</option>
                     <?php foreach ($streamings as $item): ?>

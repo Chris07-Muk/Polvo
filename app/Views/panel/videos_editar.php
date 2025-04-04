@@ -4,7 +4,7 @@
 <style>
     body {
         font-family: 'Poppins', sans-serif;
-        background-color: #F9FAFB;
+        background-color: #F3F4F6;
         color: #111827;
     }
 
@@ -12,14 +12,15 @@
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         border: none;
-        background-color: #fff;
+        background-color: #ffffff;
         padding: 25px;
     }
 
     h4 {
         font-weight: 600;
-        color: #4F46E5;
+        color: #10B981;
         margin-bottom: 25px;
+        text-align: center;
     }
 
     .form-group label {
@@ -28,16 +29,21 @@
         margin-bottom: 6px;
     }
 
-    .form-control, .form-control-file, select, textarea {
+    .form-control,
+    .form-control-file,
+    select,
+    textarea {
         border-radius: 8px;
         border: 1px solid #CBD5E0;
         padding: 10px;
         transition: all 0.3s ease;
     }
 
-    .form-control:focus, select:focus, textarea:focus {
-        border-color: #4F46E5;
-        box-shadow: 0 0 0 0.15rem rgba(79, 70, 229, 0.2);
+    .form-control:focus,
+    select:focus,
+    textarea:focus {
+        border-color: #10B981;
+        box-shadow: 0 0 0 0.15rem rgba(16, 185, 129, 0.25);
     }
 
     .btn {
@@ -48,13 +54,13 @@
     }
 
     .btn-success {
-        background-color: #4F46E5;
+        background-color: #10B981;
         border: none;
         color: white;
     }
 
     .btn-success:hover {
-        background-color: #4338CA;
+        background-color: #059669;
         transform: translateY(-1px);
     }
 
@@ -72,6 +78,7 @@
     .form-text {
         font-size: 0.85rem;
         color: #6B7280;
+        margin-top: 4px;
     }
 </style>
 <?= $this->endSection() ?>
@@ -80,38 +87,42 @@
 <div class="row justify-content-center">
     <div class="col-md-10 col-lg-8">
         <div class="card">
-            <h4 class="text-center"><i class="fas fa-edit mr-2"></i>Editar Video</h4>
+            <h4><i class="fas fa-edit mr-2"></i> Editar Video</h4>
 
             <?= form_open_multipart(route_to('actualizar_video', $video->id_video)) ?>
 
             <div class="form-group">
-                <label for="video">Archivo de Video <small>(dejar vacío para mantener el actual)</small></label>
-                <input type="file" name="video" class="form-control-file" accept="video/*">
-                <small class="form-text">Archivo actual: <?= esc($video->video) ?></small>
+                <label for="video">📁 Archivo de Video <small>(opcional)</small></label>
+                <input type="file" name="video" class="form-control-file" accept="video/mp4">
+                <small class="form-text">Archivo actual: <strong><?= esc($video->video) ?></strong></small>
             </div>
 
             <div class="form-group">
-                <label for="nombre_temporada">Nombre de Temporada</label>
-                <input type="text" name="nombre_temporada" class="form-control" value="<?= esc($video->nombre_temporada) ?>" required>
+                <label for="nombre_temporada">📺 Nombre de la Temporada</label>
+                <input type="text" name="nombre_temporada" class="form-control"
+                       value="<?= esc($video->nombre_temporada) ?>" required>
             </div>
 
             <div class="form-group">
-                <label for="video_temporada">Número de Temporada</label>
-                <input type="number" name="video_temporada" class="form-control" value="<?= esc($video->video_temporada) ?>" min="1" required>
+                <label for="video_temporada">#️⃣ Número de Temporada</label>
+                <input type="number" name="video_temporada" class="form-control"
+                       min="1" value="<?= esc($video->video_temporada) ?>" required>
             </div>
 
             <div class="form-group">
-                <label for="capitulo_temporada">Número de Capítulo</label>
-                <input type="number" name="capitulo_temporada" class="form-control" value="<?= esc($video->capitulo_temporada) ?>" min="1" required>
+                <label for="capitulo_temporada">🎞️ Número de Capítulo</label>
+                <input type="number" name="capitulo_temporada" class="form-control"
+                       min="1" value="<?= esc($video->capitulo_temporada) ?>" required>
             </div>
 
             <div class="form-group">
-                <label for="descripcion_capitulo_temporada">Descripción del Capítulo</label>
-                <textarea name="descripcion_capitulo_temporada" rows="4" class="form-control" required><?= esc($video->descripcion_capitulo_temporada) ?></textarea>
+                <label for="descripcion_capitulo_temporada">📝 Descripción del Capítulo</label>
+                <textarea name="descripcion_capitulo_temporada" rows="4"
+                          class="form-control" required><?= esc($video->descripcion_capitulo_temporada) ?></textarea>
             </div>
 
             <div class="form-group">
-                <label for="id_streaming">Título (Streaming) Asociado</label>
+                <label for="id_streaming">🎬 Título (Streaming) Asociado</label>
                 <select name="id_streaming" class="form-control" required>
                     <option value="">Seleccione un título</option>
                     <?php foreach ($streamings as $item): ?>

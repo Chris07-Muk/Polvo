@@ -16,7 +16,7 @@
     }
 
     .card-header {
-        background: linear-gradient(135deg, #4F46E5 0%, #4338CA 100%);
+        background: linear-gradient(135deg, #10B981 0%, #047857 100%);
         color: white;
         padding: 20px;
         border-top-left-radius: 12px;
@@ -35,23 +35,21 @@
         margin-bottom: 6px;
     }
 
-    .form-control,
-    select {
+    .form-control, select {
         border-radius: 8px;
         border: 1px solid #CBD5E0;
         padding: 10px 15px;
         transition: all 0.3s ease;
     }
 
-    .form-control:focus,
-    select:focus {
-        border-color: #4F46E5;
-        box-shadow: 0 0 0 0.15rem rgba(79, 70, 229, 0.25);
+    .form-control:focus, select:focus {
+        border-color: #10B981;
+        box-shadow: 0 0 0 0.15rem rgba(16, 185, 129, 0.25);
     }
 
     .card-footer {
-        background-color: #F8FAFC;
-        border-top: 1px solid #E2E8F0;
+        background-color: #F0FDF4;
+        border-top: 1px solid #D1FAE5;
         padding: 20px;
     }
 
@@ -63,13 +61,13 @@
     }
 
     .btn-primary {
-        background-color: #4F46E5;
+        background-color: #10B981;
         border: none;
         color: white;
     }
 
     .btn-primary:hover {
-        background-color: #4338CA;
+        background-color: #047857;
         transform: translateY(-1px);
     }
 
@@ -91,7 +89,7 @@
     <div class="col-md-10 col-lg-8">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title"><i class="fas fa-edit mr-2"></i>Editar Plan Asignado</h3>
+                <h3 class="card-title"><i class="fas fa-leaf mr-2"></i>Editar Plan Asignado</h3>
             </div>
 
             <?= form_open(route_to('actualizar_usuario_plan', $registro->id_usuario_plan)) ?>
@@ -140,7 +138,7 @@
 
             <div class="card-footer text-right">
                 <a href="<?= route_to('usuarios_planes') ?>" class="btn btn-secondary">
-                    <i class="fas fa-times mr-1"></i> Cancelar
+                    <i class="fas fa-arrow-left mr-1"></i> Cancelar
                 </a>
                 <button type="submit" class="btn btn-primary ml-2">
                     <i class="fas fa-save mr-1"></i> Actualizar

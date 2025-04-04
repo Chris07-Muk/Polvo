@@ -16,7 +16,7 @@
     }
 
     .card-header {
-        background: linear-gradient(135deg, #4F46E5 0%, #4338CA 100%);
+        background: linear-gradient(135deg, #10B981 0%, #059669 100%);
         color: white;
         padding: 20px;
         border-top-left-radius: 12px;
@@ -43,8 +43,8 @@
     }
 
     .form-control:focus, select:focus {
-        border-color: #4F46E5;
-        box-shadow: 0 0 0 0.15rem rgba(79, 70, 229, 0.25);
+        border-color: #10B981;
+        box-shadow: 0 0 0 0.15rem rgba(16, 185, 129, 0.25);
     }
 
     .card-footer {
@@ -89,7 +89,7 @@
     <div class="col-md-10 col-lg-8">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title"><i class="fas fa-plus mr-2"></i>Nuevo Plan</h3>
+                <h3 class="card-title"><i class="fas fa-plus-circle mr-2"></i>Nuevo Plan</h3>
             </div>
 
             <?= form_open(route_to('guardar_plan')) ?>
