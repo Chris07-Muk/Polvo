@@ -22,4 +22,13 @@ class Tabla_Streaming extends Model
         'fecha_estreno_streaming',
         'id_genero'
     ];
+    public function get_recientes($limite = 3)
+    {
+        return $this->db->table($this->table)
+            ->where('estatus_streaming', 1)
+            ->orderBy('id_streaming', 'DESC')
+            ->limit($limite)
+            ->get()
+            ->getResult();
+    }
 }
