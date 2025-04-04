@@ -4,6 +4,9 @@ namespace App\Controllers\Portal;
 
 use App\Controllers\BaseController;
 
+use App\Models\Tabla_Streaming;
+
+
 class Portal extends BaseController
 {
     private $view = 'portal/portal';  // Vista que se va a cargar
@@ -22,8 +25,12 @@ class Portal extends BaseController
         $data['nombre_pagina'] = 'Blockbuster';  // Nombre de la página
         $data['titulo_pagina'] = 'Blockbuster';  // Título de la página
         $data['is_logged'] = $this->session->is_logged; //verificación de loggeado
-        // 
-        //
+        
+        $modeloStreaming = new Tabla_Streaming();
+
+        // Cargar streamings recientes
+        $data['recientes'] = $modeloStreaming->get_recientes(3);
+       // dd($data['recientes']);
 
         return $data;
     }
