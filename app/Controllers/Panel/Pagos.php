@@ -30,7 +30,6 @@ class Pagos extends BaseController
         'imagen_usuario' => $this->session->perfil ?? (($this->session->sexo ?? '') == MASCULINO ? 'HOMBRE.jpeg' : 'MUJER.jpeg'),
     ];
 
-    // 🔧 Breadcrumb (arreglo de navegación)
     $breadcrumb = [
         ['href' => route_to('pagos'), 'titulo' => 'Pagos']
     ];
