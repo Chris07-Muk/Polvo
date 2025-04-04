@@ -161,8 +161,7 @@ public function agregar()
         }
     
         $archivoVideo = $this->request->getFile('video');
-        $nombreArchivo = $video->video; // ✅ Corrección aquí
-    
+        $nombreArchivo = $video->video; 
         if ($archivoVideo->isValid() && !$archivoVideo->hasMoved()) {
             $nombreArchivo = $archivoVideo->getRandomName();
             $archivoVideo->move($this->carpetaVideos, $nombreArchivo);
