@@ -14,30 +14,34 @@ class Perfil extends BaseController
         $this->session = session();
     }
 
-    private function load_data(){
-        $data = array();
-        $data['nombre_pagina'] = 'Perfil';
-        $data['titulo_pagina'] = 'Perfil usuario';
-
-        $id_usuario = $this->session->get('id_usuario');
-
-        // Obtener datos actualizados del plan desde la base
-        $modelo_planes = new Tabla_UsuariosPlanes();
-        $plan = $modelo_planes->plan_usuario($id_usuario);
-
+    private function load_data() {
+        // Inicializar array de datos
+        $data = [
+            'nombre_pagina' => 'Perfil',
+            'titulo_pagina' => 'Perfil usuario',
+            'is_logged' => $this->session->get('is_logged')
+        ];
+    
+        // Obtener datos del usuario desde sesión
         $data["nombre_completo_usuario"] = $this->session->get('nombre_completo');
         $data["nombre_usuario"] = $this->session->get('nickname');
-        $data["nombre_completo"] = $this->session->get('nombre_completo');
+        $data["nombre_completo"] = $data["nombre_completo_usuario"]; 
         $data["email_usuario"] = $this->session->get('correo');
-        $data["imagen_usuario"] = ($this->session->get('perfil') == NULL) 
-                                    ? (($this->session->get('sexo') == MASCULINO) ? 'HOMBRE.jpeg' : 'MUJER.jpeg') 
-                                    : $this->session->get('perfil');
-        $data["is_logged"] = $this->session->get('is_logged');
+    
+        // Determinar imagen de perfil
+        $imagenPerfil = $this->session->get('perfil');
+        $data["imagen_usuario"] = $imagenPerfil ?? 
+                                 (($this->session->get('sexo') == MASCULINO) ? 'HOMBRE.jpeg' : 'MUJER.jpeg');
+    
+        // Obtener datos del plan
+        $id_usuario = $this->session->get('id_usuario');
+        $plan = (new Tabla_UsuariosPlanes())->plan_usuario($id_usuario);
+        
         $data["nombre_plan"] = $plan ? $plan->nombre_plan : 'Sin plan';
         $data["dias_activo"] = $plan ? $plan->dias_activo : 0;
-
+    
         helper('message');
-
+    
         return $data;
     }
 
